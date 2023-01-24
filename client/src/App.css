@@ -6,7 +6,7 @@
 
 body {
   background: radial-gradient(circle at 33.1% 2.8%, #383838 0%, #000000 99.4%);
-  color: #ceced8;
+  color: #fff;
   min-height: 100vh;
   min-width: 100%;
 }
@@ -33,14 +33,14 @@ body {
   margin-left: 70px;
   font-size: small;
   text-decoration: none;
-  color: #ceced8;
+  color: #fff;
 }
 
 .nav-main a:visited {
   margin-left: 70px;
   font-size: small;
   text-decoration: none;
-  color: #ceced8;
+  color: #fff;
 }
 
 .moon {
@@ -91,7 +91,7 @@ body {
 }
 
 .type-cursor {
-  font-size: 45px;
+  font-size: 50px;
   display: none;
 }
 
@@ -155,12 +155,9 @@ body {
   font-size: small;
 }
 
-
 .intro {
   margin-top: 300px;
   min-height: 800px;
-  display: flex;
-  justify-content: center;
   border: 2px solid red;
 }
 
@@ -174,10 +171,70 @@ body {
 .type2 {
   font-size: 25px;
   display: flex;
-text-align: center;  /* font-weight: 500; */
+  text-align: center; /* font-weight: 500; */
 }
 
 .type-cursor2 {
-  font-size: 45px;
   display: none;
+}
+
+.values {
+  margin-top: 100px;
+}
+
+.values h1 {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.value-cards {
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.card {
+  height: 250px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid transparent;
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px 0px #ffffff;
+}
+
+.card:hover {
+  height: 250px;
+  width: 300px;
+  border: 0.5px solid transparent;
+  border-radius: 15px;
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 20px 2px #ffffff;
+}
+
+.card:hover h3 {
+  color: aqua;
+}
+
+.card-top {
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-top h3 {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.card-bottom {
+  text-align: center;
+  padding: 25px;
+  height: 45%;
+  background-color: #171b20;
+  color: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }

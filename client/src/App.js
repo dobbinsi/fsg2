@@ -1,5 +1,6 @@
 import "./App.css";
 import About from "./components/About";
+import Research from "./components/Research";
 
 import React, {
   useState,
@@ -89,9 +90,21 @@ function App() {
           </div>
           <div className="socialscroll">
             <div className="socials">
-              <FontAwesomeIcon icon={faTwitter} color="#f0ffff" size="sm" />
+              <a
+                href="https://twitter.com/flipsidegov"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faTwitter} color="#f0ffff" size="sm" />
+              </a>
               {/* <FontAwesomeIcon icon={faTelegram} color="#f0ffff" size="sm" /> */}
-              <FontAwesomeIcon icon={faMedium} color="#f0ffff" size="sm" />
+              <a
+                href="https://medium.com/flipside-governance"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faMedium} color="#f0ffff" size="sm" />
+              </a>
             </div>
             <div className="scroll">
               <p className="text-vert">Scroll</p>
@@ -104,6 +117,7 @@ function App() {
             </div>
           </div>
           <About />
+          <Research />
         </div>
       </div>
     </ThemeContext.Provider>
