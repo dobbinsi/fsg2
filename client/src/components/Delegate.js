@@ -15,7 +15,7 @@ function Delegate() {
           onInit={(typewriter) => {
             typewriter
               .typeString(
-                "We are a full time governance team dedicated to the complete Web3 ecosystem. We currently run delegations in multiple Ethereum-based DAOs. We're committed to using our experience to improve DAOs, one proposal at a time. Through our participation in multiple DAOs, we've developed key understandings around the needs and flow of information in the governance process and developed key tooling to be successful. Our dedication to support, contribute and drive participation in our partner communities allows us to improve the efficiencies of DAOs."
+                "We are a full time governance team dedicated to the complete Web3 ecosystem. We currently run delegations in multiple Ethereum-based DAOs. We're committed to using our experience to improve DAOs, one proposal at a time. Through our participation in multiple DAOs, we've developed key understandings around the needs and flow of information in the governance process and developed key tooling to be successful. Our dedication to support, contribute and drive participation in our partner communities allows us to improve outcomes for everyone, and we'd be honored to vote on your behalf."
               )
               .start();
           }}
