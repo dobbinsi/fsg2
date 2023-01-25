@@ -8,12 +8,35 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions, Snackbar } from "@mui/material";
 
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 function Research() {
   const [blogData, setBlogData] = useState([]);
   const [open, setOpen] = useState(false);
   const handleCopy = () => {
     setOpen(true);
     navigator.clipboard.writeText(blogData.link);
+  };
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
   };
 
   useEffect(() => {
@@ -23,8 +46,7 @@ function Research() {
       )
       .then((res) => {
         console.log(res.data.items);
-        console.log(res.data.items[0]);
-        setBlogData(res.data.items[2]);
+        setBlogData(res.data.items);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -47,70 +69,86 @@ function Research() {
         />
       </div>
       <div className="values">
-        <h1>From our Blog</h1>
+        <h1>Latest Research</h1>
         <div className="value-cards">
-          <div>
-            <Card sx={{ width: 350, borderRadius: 3 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="250"
-                  image={blogData.thumbnail}
-                  alt="thumbnail"
-                />
-                <CardContent sx={{ backgroundColor: "#171b20", color: "#fff" }}>
-                  <Typography
-                    gutterBottom
-                    variant="h6"
-                    component="div"
+          {/* <div style={{ margin: "auto" }}> */}
+          <Carousel
+            responsive={responsive}
+            focusOnSelect={true}
+            infinite={true}
+            autoPlay={true}
+            arrows={false}
+          >
+            {blogData.map((post, index) => (
+              <Card sx={{ width: 400, borderRadius: 3 }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="250"
+                    image={post.thumbnail}
+                    alt="thumbnail"
+                  />
+                  <CardContent
+                    sx={{
+                      backgroundColor: "#171b20",
+                      color: "#fff",
+                    //   minHeight: 100,
+                    }}
+                  >
+                    <Typography
+                      gutterBottom
+                      variant="h6"
+                      component="div"
+                      sx={{ fontFamily: "Courier New", minHeight: 120, }}
+                    >
+                      {post.title}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      // color="text.secondary"
+                      sx={{ fontFamily: "Courier New" }}
+                    >
+                      Author: {post.author}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    backgroundColor: "#171b20",
+                    color: "#fff",
+                  }}
+                >
+                  <Button
+                    size="small"
+                    color="primary"
+                    href={post.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     sx={{ fontFamily: "Courier New" }}
                   >
-                    {blogData.title}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    // color="text.secondary"
+                    Read More
+                  </Button>
+                  <Button
+                    size="small"
+                    color="primary"
                     sx={{ fontFamily: "Courier New" }}
+                    onClick={() => handleCopy(post.link)}
                   >
-                    Author: {blogData.author}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  backgroundColor: "#171b20",
-                  color: "#fff",
-                }}
-              >
-                <Button
-                  size="small"
-                  color="primary"
-                  href={blogData.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{ fontFamily: "Courier New" }}
-                >
-                  Read More
-                </Button>
-                <Button
-                  size="small"
-                  color="primary"
-                  sx={{ fontFamily: "Courier New" }}
-                  onClick={() => handleCopy(blogData.link)}
-                >
-                  Share
-                </Button>
-                <Snackbar
-                  open={open}
-                  onClose={() => setOpen(false)}
-                  autoHideDuration={2000}
-                  message="Copied to Clipboard"
-                />
-              </CardActions>
-            </Card>
-          </div>
+                    Share
+                  </Button>
+                  <Snackbar
+                    open={open}
+                    onClose={() => setOpen(false)}
+                    autoHideDuration={2000}
+                    message="Copied to Clipboard"
+                  />
+                </CardActions>
+              </Card>
+            ))}
+          </Carousel>
+          {/* </div> */}
         </div>
       </div>
     </div>

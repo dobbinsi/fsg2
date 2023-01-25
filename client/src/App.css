@@ -5,7 +5,7 @@
 }
 
 body {
-  background: radial-gradient(circle at 33.1% 2.8%, #383838 0%, #000000 99.4%);
+  background: radial-gradient(circle at 1.1% 0.1%, #383838 0%, #000000 99.8%);
   color: #fff;
   min-height: 100vh;
   min-width: 100%;
@@ -29,19 +29,38 @@ body {
   justify-content: space-between;
 }
 
-.nav-main a {
+/* .nav-main a {
   margin-left: 70px;
-  font-size: small;
+  font-size: medium;
+  text-decoration: none;
+  color: #fff;
+} */
+
+.navlink {
+  margin-left: 70px;
+  font-size: medium;
   text-decoration: none;
   color: #fff;
 }
 
-.nav-main a:visited {
+.navlink:visited {
   margin-left: 70px;
-  font-size: small;
+  font-size: medium;
   text-decoration: none;
   color: #fff;
 }
+
+
+.navlink:hover {
+  color: #0097ce;
+}
+
+/* .nav-main a:visited {
+  margin-left: 70px;
+  font-size: medium;
+  text-decoration: none;
+  color: #fff;
+} */
 
 .moon {
   margin-left: 70px;
@@ -152,7 +171,7 @@ body {
 
 .text-vert {
   writing-mode: vertical-rl;
-  font-size: small;
+  font-size: medium;
 }
 
 .intro {
@@ -185,8 +204,15 @@ body {
 .values h1 {
   text-align: center;
   font-size: xx-large;
+  margin-bottom: 100px;
 }
 
+.value-cards {
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+}
+/* 
 .value-cards {
   margin: auto;
   display: flex;
@@ -237,4 +263,94 @@ body {
   color: #fff;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+} */
+
+.container {
+  /*   position: absolute; */
+  height: 300px;
+  width: 85%;
+  /*   margin-top: 260px; */
+  /*   left: calc(50% - 300px); */
+  display: flex;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  height: 320px;
+  width: 350px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  /*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card p {
+  color: #424242;
+  position: absolute;
+  left: 20px;
+  top: 35px;
+}
+
+.card:not(:first-child) {
+  margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover p {
+  color: #fff;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: #fff;
+  font-weight: 300;
+  font-size: x-large;
+  position: absolute;
+  left: 20px;
+  top: 40px;
+}
+
+.bar {
+  position: absolute;
+  margin: auto;
+  top: 100px;
+  /*   left: 15px; */
+  height: 5px;
+  width: 90%;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background-color: #08aeea;
+  background-image: linear-gradient(90deg, #08aeea 0%, #2af598 100%);
+
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 100%;
+  transition: 0.4s ease-out;
 }

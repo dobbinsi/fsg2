@@ -21,35 +21,59 @@ function About() {
       </div>
       <div className="values">
         <h1>Our Values</h1>
-        <div className="value-cards">
-          <div className="card">
-            <div className="card-top">
-              <h3>Authentic</h3>
-            </div>
-            <div className="card-bottom">
+        <div class="container">
+          <div class="card">
+            <h3 class="title">Authentic</h3>
+            <div class="bar">
+              <div class="emptybar"></div>
+              <div class="filledbar"></div>
               <p>
                 We're here because we're passionate about crypto and what it can
-                achieve. We're users first and governors second.
+                achieve. We're users first and governors second.{" "}
               </p>
             </div>
           </div>
-          <div className="card">
-            <div className="card-top">
-              <h3>Rational</h3>
-            </div>
-            <div className="card-bottom">
+          <div class="card">
+            <h3 class="title">Rational</h3>
+            <div class="bar">
+              <div class="emptybar"></div>
+              <div class="filledbar"></div>
               <p>
-                We consider all possible outcomes to the best of our ability and thoroughly weigh the pros and cons of each decision we make. 
+                We consider all possible outcomes to the best of our ability and
+                thoroughly weigh the pros and cons of each decision we make.
               </p>
             </div>
           </div>
-          <div className="card">
-            <div className="card-top">
-              <h3>Human</h3>
-            </div>
-            <div className="card-bottom">
+          <div class="card">
+            <h3 class="title">Human</h3>
+            <div class="bar">
+              <div class="emptybar"></div>
+              <div class="filledbar"></div>
               <p>
-                We form real connections through collaboration with other delegates and governance participants.
+                We form real connections through collaboration with other
+                delegates and governance participants.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="title">Curious</h3>
+            <div class="bar">
+              <div class="emptybar"></div>
+              <div class="filledbar"></div>
+              <p>
+                We embrace the never-ending learning curve that is crypto and
+                love to experiment with new ideas and frameworks.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="title">Loyal</h3>
+            <div class="bar">
+              <div class="emptybar"></div>
+              <div class="filledbar"></div>
+              <p>
+                We stay committed to each other and the protocols that we serve
+                because we believe in the mission.
               </p>
             </div>
           </div>

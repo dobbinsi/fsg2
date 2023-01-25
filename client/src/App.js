@@ -53,9 +53,9 @@ function App() {
         <div className="wrapper">
           <div className="header">
             <div className="nav-main">
-              <a href="/">About Us</a>
-              <a href="/">Research & Content</a>
-              <a href="/">Delegate Tokens</a>
+              <a href="/" className="navlink">About Us</a>
+              <a href="/" className="navlink">Research & Content</a>
+              <a href="/" className="navlink">Delegate Tokens</a>
 
               <DarkModeSwitch
                 checked={isDarkMode}
@@ -95,7 +95,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faTwitter} color="#f0ffff" size="sm" />
+                <FontAwesomeIcon icon={faTwitter} color="#f0ffff" size="lg" />
               </a>
               {/* <FontAwesomeIcon icon={faTelegram} color="#f0ffff" size="sm" /> */}
               <a
@@ -103,7 +103,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faMedium} color="#f0ffff" size="sm" />
+                <FontAwesomeIcon icon={faMedium} color="#f0ffff" size="lg" />
               </a>
             </div>
             <div className="scroll">
