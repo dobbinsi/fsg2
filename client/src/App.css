@@ -11,6 +11,18 @@ body {
   min-width: 100%;
 }
 
+.test {
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+#light .test {
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+
 .wrapper {
   width: 85%;
   margin: auto;
@@ -242,6 +254,15 @@ body {
   margin-bottom: 80px;
 }
 
+.dbcard {
+  box-shadow: 0px 0px 8px 0px #fff;
+}
+
+.dbcard:hover {
+  transition: 0.3s;
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 20px 2px #fff;
+}
 
 /* 
 .value-cards {

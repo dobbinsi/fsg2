@@ -83,7 +83,7 @@ function Research() {
                 arrows={false}
               >
                 {blogData.map((post, index) => (
-                  <Card sx={{ width: 400, borderRadius: 3 }}>
+                  <Card sx={{ width: 400, borderRadius: 3 }} className="dbcard">
                     <CardActionArea>
                       <CardMedia
                         component="img"

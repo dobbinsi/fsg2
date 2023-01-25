@@ -32,8 +32,8 @@ import useLocalStorage from "use-local-storage";
 const ThemeContext = createContext(null);
 
 function App() {
-  const [isDarkMode, setDarkMode] = useLocalStorage("isDarkMode", false);
-  const [theme, setTheme] = useLocalStorage("theme", "light");
+  const [isDarkMode, setDarkMode] = useLocalStorage("isDarkMode", true);
+  const [theme, setTheme] = useLocalStorage("theme", "dark");
 
   const toggleDarkMode = (isDarkMode) => {
     const newTheme = theme === "dark" ? "light" : "dark";
@@ -48,7 +48,7 @@ function App() {
       <div
         style={{
           background: isDarkMode
-            ? "radial-gradient(circle at 33.1% 2.8%, #383838 0%, #000000 99.4%);"
+            ? "#000"
             : "#ffffff",
           transition: "0.5s background",
         }}

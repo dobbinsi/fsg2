@@ -26,6 +26,10 @@ function Dashboards() {
       width: 90,
       borderRadius: 2,
     },
+    media2: {
+      boxShadow: "0px 0px 8px 0px #fff",
+      "&:hover": { boxShadow: "0px 0px 20px 0px #fff" },
+    },
   };
 
   return (
@@ -49,7 +53,14 @@ function Dashboards() {
         <h1>Dashboards & Tooling</h1>
         <div className="dashb">
           <div className="dbleft">
-            <Card sx={{ maxWidth: 600, borderRadius: 3, marginBottom: 6 }}>
+            <Card
+              sx={{
+                maxWidth: 600,
+                borderRadius: 3,
+                marginBottom: 6,
+              }}
+              className="dbcard"
+            >
               <CardActionArea
                 sx={{ display: "flex", backgroundColor: "#171b20", padding: 1 }}
               >
@@ -108,7 +119,10 @@ function Dashboards() {
                 </Button>
               </CardActions>
             </Card>
-            <Card sx={{ maxWidth: 600, borderRadius: 3, marginBottom: 6 }}>
+            <Card
+              sx={{ maxWidth: 600, borderRadius: 3, marginBottom: 6 }}
+              className="dbcard"
+            >
               <CardActionArea
                 sx={{ display: "flex", backgroundColor: "#171b20", padding: 1 }}
               >
@@ -170,7 +184,10 @@ function Dashboards() {
             </Card>
           </div>
           <div className="dbright">
-            <Card sx={{ maxWidth: 600, borderRadius: 3, marginBottom: 6 }}>
+            <Card
+              sx={{ maxWidth: 600, borderRadius: 3, marginBottom: 6 }}
+              className="dbcard"
+            >
               <CardActionArea
                 sx={{ display: "flex", backgroundColor: "#171b20", padding: 1 }}
               >
@@ -230,7 +247,10 @@ function Dashboards() {
                 </Button>
               </CardActions>
             </Card>
-            <Card sx={{ maxWidth: 600, borderRadius: 3, marginBottom: 6 }}>
+            <Card
+              sx={{ maxWidth: 600, borderRadius: 3, marginBottom: 6 }}
+              className="dbcard"
+            >
               <CardActionArea
                 sx={{ display: "flex", backgroundColor: "#171b20", padding: 1 }}
               >
