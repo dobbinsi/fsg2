@@ -21,7 +21,7 @@ function About() {
       </div>
       <div className="values">
         <h1>Our Values</h1>
-        <div class="container">
+        <div class="container1">
           <div class="card">
             <h3 class="title">Authentic</h3>
             <div class="bar">

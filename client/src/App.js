@@ -1,6 +1,8 @@
 import "./App.css";
 import About from "./components/About";
 import Research from "./components/Research";
+import Dashboards from "./components/Dashboards";
+import Delegate from "./components/Delegate";
 
 import React, {
   useState,
@@ -53,9 +55,15 @@ function App() {
         <div className="wrapper">
           <div className="header">
             <div className="nav-main">
-              <a href="/" className="navlink">About Us</a>
-              <a href="/" className="navlink">Research & Content</a>
-              <a href="/" className="navlink">Delegate Tokens</a>
+              <a href="/" className="navlink">
+                About Us
+              </a>
+              <a href="/" className="navlink">
+                Research & Content
+              </a>
+              <a href="/" className="navlink">
+                Delegate Tokens
+              </a>
 
               <DarkModeSwitch
                 checked={isDarkMode}
@@ -95,7 +103,12 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faTwitter} color="#f0ffff" size="lg" />
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  color="#f0ffff"
+                  size="lg"
+                  className="iconos"
+                />
               </a>
               {/* <FontAwesomeIcon icon={faTelegram} color="#f0ffff" size="sm" /> */}
               <a
@@ -103,7 +116,12 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faMedium} color="#f0ffff" size="lg" />
+                <FontAwesomeIcon
+                  icon={faMedium}
+                  color="#f0ffff"
+                  size="lg"
+                  className="iconos"
+                />
               </a>
             </div>
             <div className="scroll">
@@ -118,6 +136,8 @@ function App() {
           </div>
           <About />
           <Research />
+          <Dashboards />
+          <Delegate />
         </div>
       </div>
     </ThemeContext.Provider>
