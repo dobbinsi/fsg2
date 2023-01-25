@@ -16,7 +16,7 @@ body {
   margin: auto;
   padding: 30px;
   background-color: transparent;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .header {
@@ -52,10 +52,28 @@ body {
 
 .navlink:hover {
   color: #00d5ff;
+  cursor: pointer;
 }
 
 .iconos:hover {
   color: #00d5ff;
+  cursor: pointer;
+}
+
+.scroller {
+  display: flex;
+  justify-content: center;
+}
+
+.iconos-up {
+  cursor: pointer;
+  margin-top: 50px;
+  text-align: end;
+}
+
+.iconos-up:hover {
+  color: #00d5ff;
+  cursor: pointer;
 }
 
 /* .nav-main a:visited {
@@ -154,8 +172,8 @@ body {
 .socialscroll {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
-  border: 2px solid red;
+  margin-top: 60px;
+  /* border: 2px solid red; */
 }
 
 .socials {
@@ -178,16 +196,16 @@ body {
 }
 
 .intro {
-  margin-top: 300px;
+  margin-top: 200px;
   min-height: 800px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .typewriter2 {
   margin: auto;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 .type2 {
@@ -204,11 +222,26 @@ body {
   margin-top: 100px;
 }
 
+/* .valuesd {
+  margin-top: 10px;
+} */
+
 .values h1 {
   text-align: center;
   font-size: xx-large;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
+
+/* .valuesd h1 {
+  text-align: center;
+  font-size: xx-large;
+  margin-bottom: 60px;
+} */
+
+#dele {
+  margin-bottom: 80px;
+}
+
 
 /* 
 .value-cards {
@@ -355,8 +388,8 @@ body {
 
 .dashb {
   margin: auto;
-  min-height: 700px;
-  border: 2px solid red;
+  /* min-height: 700px; */
+  /* border: 2px solid red; */
   display: flex;
   justify-content: space-evenly;
 }
@@ -445,6 +478,7 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .container2 .card2 .face.face2 .content2 a {
@@ -458,6 +492,7 @@ body {
   font-weight: 700;
   padding: 5px;
   color: #fff;
+  background: #000;
   border: 2px solid #000;
 }
 

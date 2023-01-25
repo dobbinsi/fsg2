@@ -1,5 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import ScrollButton from "./ScrollButton";
 
 function About() {
   return (
@@ -78,6 +79,9 @@ function About() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="scroller">
+        <ScrollButton />
       </div>
     </div>
   );

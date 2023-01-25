@@ -3,6 +3,9 @@ import About from "./components/About";
 import Research from "./components/Research";
 import Dashboards from "./components/Dashboards";
 import Delegate from "./components/Delegate";
+import ScrollButton from "./components/ScrollButton";
+
+import { Link } from "react-scroll";
 
 import React, {
   useState,
@@ -55,16 +58,50 @@ function App() {
         <div className="wrapper">
           <div className="header">
             <div className="nav-main">
-              <a href="/" className="navlink">
-                About Us
-              </a>
-              <a href="/" className="navlink">
+              <Link
+                activeClass="active"
+                className="navlink"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                Who We Are
+              </Link>
+              <Link
+                activeClass="active"
+                className="navlink"
+                to="research"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
                 Research & Content
-              </a>
-              <a href="/" className="navlink">
+              </Link>
+              <Link
+                activeClass="active"
+                className="navlink"
+                to="dashboards"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                Dashboards & Tooling
+              </Link>
+              <Link
+                activeClass="active"
+                className="navlink"
+                to="delegate"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
                 Delegate Tokens
-              </a>
-
+              </Link>
               <DarkModeSwitch
                 checked={isDarkMode}
                 onChange={toggleDarkMode}
@@ -134,10 +171,18 @@ function App() {
               />
             </div>
           </div>
-          <About />
-          <Research />
-          <Dashboards />
-          <Delegate />
+          <div id="about">
+            <About />
+          </div>
+          <div id="research">
+            <Research />
+          </div>
+          <div id="dashboards">
+            <Dashboards />
+          </div>
+          <div id="delegate">
+            <Delegate />
+          </div>
         </div>
       </div>
     </ThemeContext.Provider>

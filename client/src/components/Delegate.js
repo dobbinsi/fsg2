@@ -1,5 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import ScrollButton from "./ScrollButton";
 
 import mkr from "../logos/mkrtoken.png";
 import hop from "../logos/hoptoken.png";
@@ -25,12 +26,12 @@ function Delegate() {
         />
       </div>
       <div className="values">
-        <h1>Delegate to Flipside</h1>
+        <h1 id="dele">Delegate to Flipside</h1>
         <div class="container2">
           <div class="card2">
             <div class="face face1">
               <div class="content">
-                <img src={mkr} alt="mkr"/>
+                <img src={mkr} alt="mkr" />
                 <h3>MakerDAO</h3>
               </div>
             </div>
@@ -50,7 +51,7 @@ function Delegate() {
           <div class="card2">
             <div class="face face1">
               <div class="content">
-                <img src={aave} alt="aave"/>
+                <img src={aave} alt="aave" />
                 <h3>Aave</h3>
               </div>
             </div>
@@ -70,7 +71,7 @@ function Delegate() {
           <div class="card2">
             <div class="face face1">
               <div class="content">
-                <img src={op} alt="op"/>
+                <img src={op} alt="op" />
                 <h3>Optimism</h3>
               </div>
             </div>
@@ -90,7 +91,7 @@ function Delegate() {
           <div class="card2">
             <div class="face face1">
               <div class="content">
-                <img src={hop} alt="hop"/>
+                <img src={hop} alt="hop" />
                 <h3>Hop</h3>
               </div>
             </div>
@@ -108,6 +109,9 @@ function Delegate() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="scroller">
+        <ScrollButton />
       </div>
     </div>
   );

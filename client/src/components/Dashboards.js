@@ -1,5 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import ScrollButton from "./ScrollButton";
 
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -291,6 +292,9 @@ function Dashboards() {
             </Card>
           </div>
         </div>
+      </div>
+      <div className="scroller">
+        <ScrollButton />
       </div>
     </div>
   );
