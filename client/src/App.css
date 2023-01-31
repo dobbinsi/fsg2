@@ -63,12 +63,12 @@ body {
 }
 
 .navlink:hover {
-  color: #00d5ff;
+  color: #5cede5;
   cursor: pointer;
 }
 
 .iconos:hover {
-  color: #00d5ff;
+  color: #5cede5;
   cursor: pointer;
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 .iconos-up:hover {
-  color: #00d5ff;
+  color: #5cede5;
   cursor: pointer;
 }
 
@@ -97,6 +97,10 @@ body {
 
 .moon {
   margin-left: 70px;
+}
+
+.moon:hover {
+  color: #5cede5;
 }
 
 /* .landing-main {
@@ -184,27 +188,27 @@ body {
 .socialscroll {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 10%;
   /* border: 2px solid red; */
 }
 
 .socials {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
+  /* flex-direction: column; */
+  /* justify-content: space-evenly; */
+  gap: 25px;
 }
 
 .scroll {
   display: flex;
-  flex-direction: column;
-  justify-content: baseline;
+  /* flex-direction: column; */
+  justify-content: center;
   gap: 10px;
 }
 
 .text-vert {
-  writing-mode: vertical-rl;
-  font-size: medium;
+  /* writing-mode: vertical-rl; */
+  font-size: large;
 }
 
 .intro {
@@ -520,4 +524,21 @@ body {
 .container2 .card2 .face.face2 .content2 a:hover {
   background: #000;
   color: #fff;
+}
+
+.TimelineIndicator_container {
+  color: rgb(141, 141, 141);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  margin-right: 20px;
+  gap: 10px;
+}
+
+.active {
+  color: #5cede5;
 }
