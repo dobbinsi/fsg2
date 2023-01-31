@@ -126,7 +126,7 @@ function App() {
             </div>
           </div>
           <div className="landing-main">
-            <HideOn inverse height={500}>
+            <HideOn inverse height={600}>
               <div className="TimelineIndicator_container">
                 <Link
                   activeClass="active"
