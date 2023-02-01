@@ -20,6 +20,7 @@ function Delegate() {
               .start();
           }}
           options={{
+            delay: 50,
             wrapperClassName: "type2",
             cursorClassName: "type-cursor2",
           }}

@@ -44,6 +44,7 @@ function Dashboards() {
               .start();
           }}
           options={{
+            delay: 50,
             wrapperClassName: "type2",
             cursorClassName: "type-cursor2",
           }}
@@ -312,9 +313,6 @@ function Dashboards() {
             </Card>
           </div>
         </div>
-      </div>
-      <div className="scroller">
-        <ScrollButton />
       </div>
     </div>
   );

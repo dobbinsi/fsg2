@@ -7,7 +7,7 @@ import Landing from "./components/Landing";
 
 import { Link } from "react-scroll";
 
-import React, { createContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import fscube from "./logos/fscubewhite.png";
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,13 +28,6 @@ import useLocalStorage from "use-local-storage";
 
 import { Tooltip, Zoom } from "@mui/material";
 
-// import {
-//   HideBetween,
-//   HideDuring,
-//   HideOn,
-//   HideScroll,
-// } from "react-hide-on-scroll";
-
 const ThemeContext = createContext(null);
 
 function App() {
@@ -47,6 +40,27 @@ function App() {
     setDarkMode(isDarkMode);
     localStorage.setItem("theme", newTheme);
     localStorage.setItem("isDarkMode", isDarkMode);
+  };
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
+  }, []);
+
+  const listenToScroll = () => {
+    let heightToShowFrom = 500;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    setHeight(winScroll);
+
+    if (winScroll < heightToShowFrom) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
   };
 
   return (
@@ -117,182 +131,181 @@ function App() {
               >
                 Delegate
               </Link>
-              <DarkModeSwitch
-                checked={isDarkMode}
-                onChange={toggleDarkMode}
-                size={16}
-                className="moon"
-              />
             </div>
+            <DarkModeSwitch
+              checked={isDarkMode}
+              onChange={toggleDarkMode}
+              size={18}
+              className="moon"
+            />
           </div>
           <div className="landing-main">
-            {/* <HideOn inverse height={600}> */}
-            <div className="TimelineIndicator_container">
-              <Link
-                activeClass="active"
-                className="iconos"
-                to="header"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                <Tooltip
-                  TransitionComponent={Zoom}
-                  title="Home"
-                  placement="left"
-                  componentsProps={{
-                    tooltip: {
-                      sx: {
-                        fontSize: "13px",
-                        fontFamily: "inherit",
-                        fontWeight: "bold",
-                        backgroundColor: "#171b20",
-                      },
-                    },
-                  }}
+            {isVisible && (
+              <div className="TimelineIndicator_container">
+                <Link
+                  activeClass="active"
+                  className="iconos"
+                  to="header"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
                 >
-                  <FontAwesomeIcon icon={faCircle} size="2xs" />
-                </Tooltip>
-              </Link>
-              <Link
-                activeClass="active"
-                className="iconos"
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                <Tooltip
-                  TransitionComponent={Zoom}
-                  title="About"
-                  placement="left"
-                  componentsProps={{
-                    tooltip: {
-                      sx: {
-                        fontSize: "13px",
-                        fontFamily: "inherit",
-                        fontWeight: "bold",
-                        backgroundColor: "#171b20",
+                  <Tooltip
+                    TransitionComponent={Zoom}
+                    title="Home"
+                    placement="left"
+                    componentsProps={{
+                      tooltip: {
+                        sx: {
+                          fontSize: "13px",
+                          fontFamily: "inherit",
+                          fontWeight: "bold",
+                          backgroundColor: "#171b20",
+                        },
                       },
-                    },
-                  }}
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faCircle} size="2xs" />
+                  </Tooltip>
+                </Link>
+                <Link
+                  activeClass="active"
+                  className="iconos"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
                 >
-                  <FontAwesomeIcon icon={faCircle} size="2xs" />
-                </Tooltip>
-              </Link>
-              <Link
-                activeClass="active"
-                className="iconos"
-                to="research"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                <Tooltip
-                  TransitionComponent={Zoom}
-                  title="Research"
-                  placement="left"
-                  componentsProps={{
-                    tooltip: {
-                      sx: {
-                        fontSize: "13px",
-                        fontFamily: "inherit",
-                        fontWeight: "bold",
-                        backgroundColor: "#171b20",
+                  <Tooltip
+                    TransitionComponent={Zoom}
+                    title="About"
+                    placement="left"
+                    componentsProps={{
+                      tooltip: {
+                        sx: {
+                          fontSize: "13px",
+                          fontFamily: "inherit",
+                          fontWeight: "bold",
+                          backgroundColor: "#171b20",
+                        },
                       },
-                    },
-                  }}
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faCircle} size="2xs" />
+                  </Tooltip>
+                </Link>
+                <Link
+                  activeClass="active"
+                  className="iconos"
+                  to="research"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
                 >
-                  <FontAwesomeIcon icon={faCircle} size="2xs" />
-                </Tooltip>
-              </Link>
-              <Link
-                activeClass="active"
-                className="iconos"
-                to="dashboards"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                <Tooltip
-                  TransitionComponent={Zoom}
-                  title="Services"
-                  placement="left"
-                  componentsProps={{
-                    tooltip: {
-                      sx: {
-                        fontSize: "13px",
-                        fontFamily: "inherit",
-                        fontWeight: "bold",
-                        backgroundColor: "#171b20",
+                  <Tooltip
+                    TransitionComponent={Zoom}
+                    title="Research"
+                    placement="left"
+                    componentsProps={{
+                      tooltip: {
+                        sx: {
+                          fontSize: "13px",
+                          fontFamily: "inherit",
+                          fontWeight: "bold",
+                          backgroundColor: "#171b20",
+                        },
                       },
-                    },
-                  }}
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faCircle} size="2xs" />
+                  </Tooltip>
+                </Link>
+                <Link
+                  activeClass="active"
+                  className="iconos"
+                  to="dashboards"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
                 >
-                  <FontAwesomeIcon icon={faCircle} size="2xs" />
-                </Tooltip>
-              </Link>
-              <Link
-                activeClass="active"
-                className="iconos"
-                to="dashboards"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                <Tooltip
-                  TransitionComponent={Zoom}
-                  title="Tools"
-                  placement="left"
-                  componentsProps={{
-                    tooltip: {
-                      sx: {
-                        fontSize: "13px",
-                        fontFamily: "inherit",
-                        fontWeight: "bold",
-                        backgroundColor: "#171b20",
+                  <Tooltip
+                    TransitionComponent={Zoom}
+                    title="Services"
+                    placement="left"
+                    componentsProps={{
+                      tooltip: {
+                        sx: {
+                          fontSize: "13px",
+                          fontFamily: "inherit",
+                          fontWeight: "bold",
+                          backgroundColor: "#171b20",
+                        },
                       },
-                    },
-                  }}
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faCircle} size="2xs" />
+                  </Tooltip>
+                </Link>
+                <Link
+                  activeClass="active"
+                  className="iconos"
+                  to="dashboards"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
                 >
-                  <FontAwesomeIcon icon={faCircle} size="2xs" />
-                </Tooltip>
-              </Link>
-              <Link
-                activeClass="active"
-                className="iconos"
-                to="delegate"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                <Tooltip
-                  TransitionComponent={Zoom}
-                  title="Delegate"
-                  placement="left"
-                  componentsProps={{
-                    tooltip: {
-                      sx: {
-                        fontSize: "13px",
-                        fontFamily: "inherit",
-                        fontWeight: "bold",
-                        backgroundColor: "#171b20",
+                  <Tooltip
+                    TransitionComponent={Zoom}
+                    title="Tools"
+                    placement="left"
+                    componentsProps={{
+                      tooltip: {
+                        sx: {
+                          fontSize: "13px",
+                          fontFamily: "inherit",
+                          fontWeight: "bold",
+                          backgroundColor: "#171b20",
+                        },
                       },
-                    },
-                  }}
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faCircle} size="2xs" />
+                  </Tooltip>
+                </Link>
+                <Link
+                  activeClass="active"
+                  className="iconos"
+                  to="delegate"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
                 >
-                  <FontAwesomeIcon icon={faCircle} size="2xs" />
-                </Tooltip>
-              </Link>
-            </div>
-            {/* </HideOn> */}
-
+                  <Tooltip
+                    TransitionComponent={Zoom}
+                    title="Delegate"
+                    placement="left"
+                    componentsProps={{
+                      tooltip: {
+                        sx: {
+                          fontSize: "13px",
+                          fontFamily: "inherit",
+                          fontWeight: "bold",
+                          backgroundColor: "#171b20",
+                        },
+                      },
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faCircle} size="2xs" />
+                  </Tooltip>
+                </Link>
+              </div>
+            )}
             <div className="logo-box">
               <a
                 href="https://flipsidecrypto.xyz/"
@@ -303,12 +316,13 @@ function App() {
                 <img src={fscube} alt="flipside" className="fslogo" />
               </a>
             </div>
-            <div className="typewriter">
+            <div className="typewriter-land">
               <Typewriter
                 onInit={(typewriter) => {
-                  typewriter.typeString("Flipside Governance").start();
+                  typewriter.typeString("FLIPSIDE GOVERNANCE").start();
                 }}
                 options={{
+                  delay: 60,
                   wrapperClassName: "type",
                   cursorClassName: "type-cursor",
                 }}
@@ -367,10 +381,9 @@ function App() {
               </a>
             </div>
             <div className="scroll">
-              {/* <p className="text-vert">Scroll</p> */}
               <Link
                 activeClass="active"
-                className="navlink"
+                className="navlink2"
                 to="about"
                 spy={true}
                 smooth={true}

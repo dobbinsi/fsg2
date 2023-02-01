@@ -1,7 +1,15 @@
+@font-face {
+  font-family: "ibm_3270_narrowmedium";
+  src: url("./assets/fonts/3270_narrow_500-webfont.woff2") format("woff2"),
+    url("./assets/fonts/3270_narrow_500-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "ibm_3270_narrowmedium", Courier, monospace;
 }
 
 body {
@@ -33,7 +41,7 @@ body {
 
 .header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .nav-main {
@@ -49,14 +57,21 @@ body {
 } */
 
 .navlink {
-  margin-left: 70px;
+  margin-right: 70px;
+  font-size: medium;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navlink2 {
+  /* margin-right: 70px; */
   font-size: medium;
   text-decoration: none;
   color: #fff;
 }
 
 .navlink:visited {
-  margin-left: 70px;
+  margin-right: 70px;
   font-size: medium;
   text-decoration: none;
   color: #fff;
@@ -141,6 +156,14 @@ body {
   margin-top: 40px;
 }
 
+.typewriter-land {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  min-height: 60px;
+}
+
 .type {
   font-size: 50px;
   /* font-weight: 500; */
@@ -188,7 +211,7 @@ body {
 .socialscroll {
   display: flex;
   justify-content: space-between;
-  margin-top: 10%;
+  margin-top: 12%;
   /* border: 2px solid red; */
 }
 
@@ -219,6 +242,7 @@ body {
 
 .typewriter2 {
   margin: auto;
+  width: 50%;
   display: flex;
   justify-content: center;
   /* margin-top: 40px; */
@@ -227,7 +251,7 @@ body {
 .type2 {
   font-size: 25px;
   display: flex;
-  text-align: left;
+  text-align: justify;
 }
 
 .type-cursor2 {
@@ -245,6 +269,7 @@ body {
 .values h1 {
   text-align: center;
   font-size: xx-large;
+  font-weight: normal;
   margin-bottom: 60px;
 }
 

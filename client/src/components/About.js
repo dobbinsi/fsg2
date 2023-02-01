@@ -15,13 +15,14 @@ function About() {
               .start();
           }}
           options={{
+            delay: 50,
             wrapperClassName: "type2",
             cursorClassName: "type-cursor2",
           }}
         />
       </div>
       <div className="values">
-        <h1>Our Values</h1>
+        <h1>OUR VALUES</h1>
         <div class="container1">
           <div class="card">
             <h3 class="title">Authentic</h3>
@@ -79,9 +80,6 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="scroller">
-        <ScrollButton />
       </div>
     </div>
   );
