@@ -1,13 +1,22 @@
 import "./App.css";
-import About from "./components/About";
-import Research from "./components/Research";
-import Dashboards from "./components/Dashboards";
-import Delegate from "./components/Delegate";
-import Landing from "./components/Landing";
+import Loader from "./components/Loader";
+// import About from "./components/About";
+// import Research from "./components/Research";
+// import Dashboards from "./components/Dashboards";
+// import Delegate from "./components/Delegate";
+// import Landing from "./components/Landing";
 
 import { Link } from "react-scroll";
 
-import React, { useState, useEffect, createContext } from "react";
+import LazyLoad from "react-lazy-load";
+
+import React, {
+  useState,
+  useEffect,
+  createContext,
+  lazy,
+  Suspense,
+} from "react";
 import fscube from "./logos/fscubewhite.png";
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,9 +35,14 @@ import {
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import useLocalStorage from "use-local-storage";
 
-import { Tooltip, Zoom } from "@mui/material";
+import { Tooltip, Zoom, Fade } from "@mui/material";
 
 const ThemeContext = createContext(null);
+
+const About = lazy(() => import("./components/About"));
+const Research = lazy(() => import("./components/Research"));
+const Dashboards = lazy(() => import("./components/Dashboards"));
+const Delegate = lazy(() => import("./components/Delegate"));
 
 function App() {
   const [isDarkMode, setDarkMode] = useLocalStorage("isDarkMode", true);
@@ -401,16 +415,24 @@ function App() {
             </div>
           </div>
           <div id="about">
-            <About />
+            <LazyLoad height={1000}>
+              <About />
+            </LazyLoad>
           </div>
           <div id="research">
-            <Research />
+            <LazyLoad height={1600}>
+              <Research />
+            </LazyLoad>
           </div>
           <div id="dashboards">
-            <Dashboards />
+            <LazyLoad height={2400}>
+              <Dashboards />
+            </LazyLoad>
           </div>
           <div id="delegate">
-            <Delegate />
+            <LazyLoad height={3200}>
+              <Delegate />
+            </LazyLoad>
           </div>
         </div>
       </div>

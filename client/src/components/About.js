@@ -1,6 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import ScrollButton from "./ScrollButton";
+
+import { Fade } from "@mui/material";
 
 function About() {
   return (
@@ -15,72 +16,75 @@ function About() {
               .start();
           }}
           options={{
-            delay: 50,
+            delay: 48,
             wrapperClassName: "type2",
             cursorClassName: "type-cursor2",
           }}
         />
       </div>
-      <div className="values">
-        <h1>OUR VALUES</h1>
-        <div class="container1">
-          <div class="card">
-            <h3 class="title">Authentic</h3>
-            <div class="bar">
-              <div class="emptybar"></div>
-              <div class="filledbar"></div>
-              <p>
-                We're here because we're passionate about crypto and what it can
-                achieve. We're users first and governors second.{" "}
-              </p>
+      <Fade in={true} timeout={4000} style={{ transitionDelay: "16000ms" }}>
+        <div className="values">
+          <h1>OUR VALUES</h1>
+          <div class="container1">
+            <div class="card">
+              <h3 class="title">Authentic</h3>
+              <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+                <p>
+                  We're here because we're passionate about crypto and what it
+                  can achieve. We're users first and governors second.{" "}
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <h3 class="title">Rational</h3>
-            <div class="bar">
-              <div class="emptybar"></div>
-              <div class="filledbar"></div>
-              <p>
-                We consider all possible outcomes to the best of our ability and
-                thoroughly weigh the pros and cons of each decision we make.
-              </p>
+            <div class="card">
+              <h3 class="title">Rational</h3>
+              <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+                <p>
+                  We consider all possible outcomes to the best of our ability
+                  and thoroughly weigh the pros and cons of each decision we
+                  make.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <h3 class="title">Human</h3>
-            <div class="bar">
-              <div class="emptybar"></div>
-              <div class="filledbar"></div>
-              <p>
-                We form real connections through collaboration with other
-                delegates and governance participants.
-              </p>
+            <div class="card">
+              <h3 class="title">Human</h3>
+              <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+                <p>
+                  We form real connections through collaboration with other
+                  delegates and governance participants.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <h3 class="title">Curious</h3>
-            <div class="bar">
-              <div class="emptybar"></div>
-              <div class="filledbar"></div>
-              <p>
-                We embrace the never-ending learning curve that is crypto and
-                love to experiment with new ideas and frameworks.
-              </p>
+            <div class="card">
+              <h3 class="title">Curious</h3>
+              <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+                <p>
+                  We embrace the never-ending learning curve that is crypto and
+                  love to experiment with new ideas and frameworks.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <h3 class="title">Loyal</h3>
-            <div class="bar">
-              <div class="emptybar"></div>
-              <div class="filledbar"></div>
-              <p>
-                We stay committed to each other and the protocols that we serve
-                because we believe in the mission.
-              </p>
+            <div class="card">
+              <h3 class="title">Loyal</h3>
+              <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+                <p>
+                  We stay committed to each other and the protocols that we
+                  serve because we believe in the mission.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Fade>
     </div>
   );
 }
