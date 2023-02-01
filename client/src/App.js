@@ -1,10 +1,4 @@
 import "./App.css";
-import Loader from "./components/Loader";
-// import About from "./components/About";
-// import Research from "./components/Research";
-// import Dashboards from "./components/Dashboards";
-// import Delegate from "./components/Delegate";
-// import Landing from "./components/Landing";
 
 import { Link } from "react-scroll";
 
@@ -22,6 +16,7 @@ import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDown,
+  faAnglesDown,
   faCircle,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
@@ -35,7 +30,7 @@ import {
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import useLocalStorage from "use-local-storage";
 
-import { Tooltip, Zoom, Fade } from "@mui/material";
+import { Tooltip, Zoom } from "@mui/material";
 
 const ThemeContext = createContext(null);
 
@@ -112,7 +107,7 @@ function App() {
               >
                 Research
               </Link>
-              <Link
+              {/* <Link
                 activeClass="active"
                 className="navlink"
                 to="dashboards"
@@ -122,7 +117,7 @@ function App() {
                 duration={500}
               >
                 Services
-              </Link>
+              </Link> */}
               <Link
                 activeClass="active"
                 className="navlink"
@@ -172,7 +167,7 @@ function App() {
                     componentsProps={{
                       tooltip: {
                         sx: {
-                          fontSize: "13px",
+                          fontSize: "14px",
                           fontFamily: "inherit",
                           fontWeight: "bold",
                           backgroundColor: "#171b20",
@@ -199,7 +194,7 @@ function App() {
                     componentsProps={{
                       tooltip: {
                         sx: {
-                          fontSize: "13px",
+                          fontSize: "14px",
                           fontFamily: "inherit",
                           fontWeight: "bold",
                           backgroundColor: "#171b20",
@@ -226,7 +221,7 @@ function App() {
                     componentsProps={{
                       tooltip: {
                         sx: {
-                          fontSize: "13px",
+                          fontSize: "14px",
                           fontFamily: "inherit",
                           fontWeight: "bold",
                           backgroundColor: "#171b20",
@@ -237,7 +232,7 @@ function App() {
                     <FontAwesomeIcon icon={faCircle} size="2xs" />
                   </Tooltip>
                 </Link>
-                <Link
+                {/* <Link
                   activeClass="active"
                   className="iconos"
                   to="dashboards"
@@ -253,7 +248,7 @@ function App() {
                     componentsProps={{
                       tooltip: {
                         sx: {
-                          fontSize: "13px",
+                          fontSize: "14px",
                           fontFamily: "inherit",
                           fontWeight: "bold",
                           backgroundColor: "#171b20",
@@ -263,7 +258,7 @@ function App() {
                   >
                     <FontAwesomeIcon icon={faCircle} size="2xs" />
                   </Tooltip>
-                </Link>
+                </Link> */}
                 <Link
                   activeClass="active"
                   className="iconos"
@@ -280,7 +275,7 @@ function App() {
                     componentsProps={{
                       tooltip: {
                         sx: {
-                          fontSize: "13px",
+                          fontSize: "14px",
                           fontFamily: "inherit",
                           fontWeight: "bold",
                           backgroundColor: "#171b20",
@@ -307,7 +302,7 @@ function App() {
                     componentsProps={{
                       tooltip: {
                         sx: {
-                          fontSize: "13px",
+                          fontSize: "14px",
                           fontFamily: "inherit",
                           fontWeight: "bold",
                           backgroundColor: "#171b20",
@@ -405,7 +400,7 @@ function App() {
                 duration={500}
               >
                 <FontAwesomeIcon
-                  icon={faAngleDown}
+                  icon={faAnglesDown}
                   color="#f0ffff"
                   size="xl"
                   className="iconos"
@@ -430,7 +425,7 @@ function App() {
             </LazyLoad>
           </div>
           <div id="delegate">
-            <LazyLoad height={3200}>
+            <LazyLoad>
               <Delegate />
             </LazyLoad>
           </div>

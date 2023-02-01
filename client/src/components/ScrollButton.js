@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 
-
 const ScrollButton = () => {
   const [visible, setVisible] = useState(false);
 
@@ -19,8 +18,6 @@ const ScrollButton = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
-      /* you can also use 'auto' behaviour
-		in place of 'smooth' */
     });
   };
 
@@ -30,7 +27,6 @@ const ScrollButton = () => {
     <FontAwesomeIcon
       icon={faAnglesUp}
       onClick={scrollToTop}
-    //   style={{ display: visible ? "inline" : "none" }}
       color="#f0ffff"
       size="lg"
       className="iconos-up"

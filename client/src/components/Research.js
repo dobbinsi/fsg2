@@ -6,28 +6,17 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import {
-  Button,
-  CardActionArea,
-  CardActions,
-  Snackbar,
-  Fade,
-} from "@mui/material";
+import { Button, CardActionArea, CardActions, Fade } from "@mui/material";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 function Research() {
   const [blogData, setBlogData] = useState([]);
-  const [open, setOpen] = useState(false);
-  const handleCopy = () => {
-    setOpen(true);
-    navigator.clipboard.writeText(blogData.link);
-  };
+  const [recapData, setRecapData] = useState([]);
 
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -48,18 +37,29 @@ function Research() {
   useEffect(() => {
     axios
       .get(
-        "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fflipside-governance"
+        "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fflipside-governance%2Ftagged%2Fflipside-governance"
+      )
+      .then((res) => {
+        setBlogData(res.data.items);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fflipside-governance%2Ftagged%2Frecap"
       )
       .then((res) => {
         console.log(res.data.items);
-        setBlogData(res.data.items);
+        setRecapData(res.data.items);
       })
       .catch((err) => console.log(err));
   }, []);
 
   return (
     <>
-      <div className="intro">
+      <div className="intro3">
         <div className="typewriter2">
           <Typewriter
             onInit={(typewriter) => {
@@ -79,7 +79,7 @@ function Research() {
         <Fade in={true} timeout={4000} style={{ transitionDelay: "19000ms" }}>
           <div className="values">
             <h1>LATEST RESEARCH</h1>
-            <div className="value-cards">
+            <div className="research-cards">
               <div style={{ position: "relative", marginLeft: 55 }}>
                 <Carousel
                   responsive={responsive}
@@ -87,16 +87,17 @@ function Research() {
                   infinite={true}
                   autoPlay={true}
                   arrows={false}
+                  className="carooo"
                 >
                   {blogData.map((post, index) => (
                     <Card
-                      sx={{ width: 400, borderRadius: 3 }}
+                      sx={{ width: 350, borderRadius: 3 }}
                       className="dbcard"
                     >
                       <CardActionArea>
                         <CardMedia
                           component="img"
-                          height="200"
+                          height="150"
                           image={post.thumbnail}
                           alt="thumbnail"
                         />
@@ -111,7 +112,78 @@ function Research() {
                             gutterBottom
                             variant="h6"
                             component="div"
-                            sx={{ fontFamily: "inherit", minHeight: 120 }}
+                            sx={{ fontFamily: "inherit", minHeight: 80 }}
+                          >
+                            {post.title}
+                          </Typography>
+                          <Typography
+                            variant="body2"
+                            // color="text.secondary"
+                            sx={{ fontFamily: "inherit" }}
+                          >
+                            Author: {post.author}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions
+                        sx={{
+                          display: "flex",
+                          justifyContent: "end",
+                          backgroundColor: "#171b20",
+                          color: "#fff",
+                        }}
+                      >
+                        <Button
+                          size="small"
+                          color="primary"
+                          href={post.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          sx={{ fontFamily: "inherit" }}
+                        >
+                          Read More
+                        </Button>
+                      </CardActions>
+                    </Card>
+                  ))}
+                </Carousel>
+              </div>
+            </div>
+            <h1>WEEKLY ACTIVITY</h1>
+            <div className="research-cards">
+              <div style={{ position: "relative", marginLeft: 55 }}>
+                <Carousel
+                  responsive={responsive}
+                  focusOnSelect={true}
+                  infinite={true}
+                  autoPlay={true}
+                  arrows={false}
+                  className="carooo"
+                >
+                  {recapData.map((post, index) => (
+                    <Card
+                      sx={{ width: 350, borderRadius: 3 }}
+                      className="dbcard"
+                    >
+                      <CardActionArea>
+                        <CardMedia
+                          component="img"
+                          height="150"
+                          image={post.thumbnail}
+                          alt="thumbnail"
+                        />
+                        <CardContent
+                          sx={{
+                            backgroundColor: "#171b20",
+                            color: "#fff",
+                            //   minHeight: 100,
+                          }}
+                        >
+                          <Typography
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                            sx={{ fontFamily: "inherit", minHeight: 80 }}
                           >
                             {post.title}
                           </Typography>

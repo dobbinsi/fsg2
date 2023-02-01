@@ -1,5 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import fsgservices from "../logos/fsgservices.png";
 
 import { Fade } from "@mui/material";
 
@@ -24,7 +25,7 @@ function About() {
       </div>
       <Fade in={true} timeout={4000} style={{ transitionDelay: "16000ms" }}>
         <div className="values">
-          <h1>OUR VALUES</h1>
+          <h1>WHO WE ARE</h1>
           <div class="container1">
             <div class="card">
               <h3 class="title">Authentic</h3>
@@ -82,6 +83,14 @@ function About() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </Fade>
+      <Fade in={true} timeout={4000} style={{ transitionDelay: "16000ms" }}>
+        <div className="values">
+          <h1 id="what">WHAT WE DO</h1>
+          <div className="dgholder">
+            <img src={fsgservices} alt="services" className="services" />
           </div>
         </div>
       </Fade>

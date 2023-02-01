@@ -1,6 +1,5 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import ScrollButton from "./ScrollButton";
 
 import mkr from "../logos/mkrtoken.png";
 import hop from "../logos/hoptoken.png";
@@ -8,10 +7,11 @@ import op from "../logos/optoken.png";
 import aave from "../logos/aavetoken.png";
 
 import { Fade } from "@mui/material";
+import Footer from "./Footer";
 
 function Delegate() {
   return (
-    <div className="intro">
+    <div className="intro5">
       <div className="typewriter2">
         <Typewriter
           onInit={(typewriter) => {
@@ -29,7 +29,7 @@ function Delegate() {
         />
       </div>
 
-      <Fade in={true} timeout={4000} style={{ transitionDelay: "19000ms" }}>
+      <Fade in={true} timeout={4000} style={{ transitionDelay: "20000ms" }}>
         <div className="values">
           <h1 id="dele">DELEGATE TO FLIPSIDE</h1>
           <div class="container2">
@@ -47,6 +47,7 @@ function Delegate() {
                     href="https://vote.makerdao.com/address/0x84b05b0a30b6ae620f393d1037f217e607ad1b96#delegate-credentials"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="hoverjawn"
                   >
                     Delegate MKR
                   </a>
@@ -67,6 +68,7 @@ function Delegate() {
                     href="https://governance.aave.com/t/flipside-crypto-delegate-platform/9193?u=fig"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="hoverjawn"
                   >
                     Delegate AAVE
                   </a>
@@ -87,6 +89,7 @@ function Delegate() {
                     href="https://app.optimism.io/delegates?search=flipside"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="hoverjawn"
                   >
                     Delegate OP
                   </a>
@@ -107,6 +110,7 @@ function Delegate() {
                     href="https://www.tally.xyz/gov/hop"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="hoverjawn"
                   >
                     Delegate HOP
                   </a>
@@ -114,11 +118,9 @@ function Delegate() {
               </div>
             </div>
           </div>
+          <Footer />
         </div>
       </Fade>
-      <div className="scroller">
-        <ScrollButton />
-      </div>
     </div>
   );
 }
