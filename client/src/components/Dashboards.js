@@ -1,18 +1,10 @@
 import React from "react";
-import Typewriter from "typewriter-effect";
-import ScrollButton from "./ScrollButton";
 
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import {
-  Button,
-  CardActionArea,
-  CardActions,
-  Snackbar,
-  Fade,
-} from "@mui/material";
+import { Button, CardActionArea, CardActions, Fade } from "@mui/material";
 
 import fscube from "../logos/fscubegrey.png";
 import optoken from "../logos/optoken.png";
@@ -41,22 +33,14 @@ function Dashboards() {
   return (
     <div className="intro">
       <div className="typewriter2">
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .typeString(
-                "Leveraging Flipside's core competencies, we also build dashboards and tooling to increase both transparency and the governance UX of the communities that we serve. To us, participating in governance is much more than acquiring tokens and voting on proposals."
-              )
-              .start();
-          }}
-          options={{
-            delay: 48,
-            wrapperClassName: "type2",
-            cursorClassName: "type-cursor2",
-          }}
-        />
+        <p className="type2">
+          Leveraging Flipside's core competencies, we also build dashboards and
+          tooling to increase both transparency and the governance UX of the
+          communities that we serve. To us, participating in governance is much
+          more than acquiring tokens and voting on proposals.
+        </p>
       </div>
-      <Fade in={true} timeout={4000} style={{ transitionDelay: "13000ms" }}>
+      <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
         <div className="values">
           <h1>TOOLS & DASHBOARDS</h1>
           <div className="dashb">
@@ -70,6 +54,9 @@ function Dashboards() {
                 className="dbcard"
               >
                 <CardActionArea
+                  href={"https://op-governance.vercel.app/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   sx={{
                     display: "flex",
                     backgroundColor: "#171b20",
@@ -111,31 +98,15 @@ function Dashboards() {
                     </Typography>
                   </CardContent>
                 </CardActionArea>
-                <CardActions
-                  sx={{
-                    display: "flex",
-                    justifyContent: "end",
-                    backgroundColor: "#171b20",
-                    color: "#fff",
-                  }}
-                >
-                  <Button
-                    size="small"
-                    color="primary"
-                    href={"https://op-governance.vercel.app/"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{ fontFamily: "inherit" }}
-                  >
-                    Visit
-                  </Button>
-                </CardActions>
               </Card>
               <Card
                 sx={{ maxWidth: 600, borderRadius: 3, marginBottom: 6 }}
                 className="dbcard"
               >
                 <CardActionArea
+                  href={"https://flipsidegov-snapshot.vercel.app/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   sx={{
                     display: "flex",
                     backgroundColor: "#171b20",
@@ -179,25 +150,6 @@ function Dashboards() {
                     </Typography>
                   </CardContent>
                 </CardActionArea>
-                <CardActions
-                  sx={{
-                    display: "flex",
-                    justifyContent: "end",
-                    backgroundColor: "#171b20",
-                    color: "#fff",
-                  }}
-                >
-                  <Button
-                    size="small"
-                    color="primary"
-                    href={"https://flipsidegov-snapshot.vercel.app/"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{ fontFamily: "inherit" }}
-                  >
-                    Visit
-                  </Button>
-                </CardActions>
               </Card>
             </div>
             <div className="dbright">
@@ -206,6 +158,9 @@ function Dashboards() {
                 className="dbcard"
               >
                 <CardActionArea
+                  href={"https://flipsidegov-mnde.vercel.app/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   sx={{
                     display: "flex",
                     backgroundColor: "#171b20",
@@ -248,31 +203,15 @@ function Dashboards() {
                     </Typography>
                   </CardContent>
                 </CardActionArea>
-                <CardActions
-                  sx={{
-                    display: "flex",
-                    justifyContent: "end",
-                    backgroundColor: "#171b20",
-                    color: "#fff",
-                  }}
-                >
-                  <Button
-                    size="small"
-                    color="primary"
-                    href={"https://flipsidegov-mnde.vercel.app/"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{ fontFamily: "inherit" }}
-                  >
-                    Visit
-                  </Button>
-                </CardActions>
               </Card>
               <Card
                 sx={{ maxWidth: 600, borderRadius: 3, marginBottom: 6 }}
                 className="dbcard"
               >
                 <CardActionArea
+                  href={"/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   sx={{
                     display: "flex",
                     backgroundColor: "#171b20",
@@ -316,25 +255,6 @@ function Dashboards() {
                     </Typography>
                   </CardContent>
                 </CardActionArea>
-                <CardActions
-                  sx={{
-                    display: "flex",
-                    justifyContent: "end",
-                    backgroundColor: "#171b20",
-                    color: "#fff",
-                  }}
-                >
-                  <Button
-                    size="small"
-                    color="primary"
-                    href={"/"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{ fontFamily: "inherit" }}
-                  >
-                    Visit
-                  </Button>
-                </CardActions>
               </Card>
             </div>
           </div>

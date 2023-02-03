@@ -1,5 +1,4 @@
 import React from "react";
-import Typewriter from "typewriter-effect";
 import fsgservices from "../logos/fsgservices.png";
 
 import { Fade } from "@mui/material";
@@ -8,22 +7,15 @@ function About() {
   return (
     <div className="intro">
       <div className="typewriter2">
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .typeString(
-                "Flipside is an ecosystem growth partner. Our governance team serves as a Professional Delegate, supporting the proliferation and function of decentralized organizations through rational decision-making, proposal creation and analytics. We bring clarity to DAOs by unlocking product, social and tokenholder value."
-              )
-              .start();
-          }}
-          options={{
-            delay: 48,
-            wrapperClassName: "type2",
-            cursorClassName: "type-cursor2",
-          }}
-        />
+        <p className="type2">
+          Flipside is an ecosystem growth partner. Our governance team serves as
+          a Professional Delegate, supporting the proliferation and function of
+          decentralized organizations through rational decision-making, proposal
+          creation and analytics. We bring clarity to DAOs by unlocking product,
+          social and tokenholder value.
+        </p>
       </div>
-      <Fade in={true} timeout={4000} style={{ transitionDelay: "16000ms" }}>
+      <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
         <div className="values">
           <h1>WHO WE ARE</h1>
           <div class="container1">
@@ -86,7 +78,7 @@ function About() {
           </div>
         </div>
       </Fade>
-      <Fade in={true} timeout={4000} style={{ transitionDelay: "16000ms" }}>
+      <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
         <div className="values">
           <h1 id="what">WHAT WE DO</h1>
           <div className="dgholder">

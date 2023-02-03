@@ -1,4 +1,5 @@
 import "./App.css";
+import ScrollButton from "./components/ScrollButton";
 
 import { Link } from "react-scroll";
 
@@ -10,6 +11,7 @@ import React, {
   createContext,
   lazy,
   Suspense,
+  useRef,
 } from "react";
 import fscube from "./logos/fscubewhite.png";
 import Typewriter from "typewriter-effect";
@@ -32,6 +34,8 @@ import useLocalStorage from "use-local-storage";
 
 import { Tooltip, Zoom } from "@mui/material";
 
+import useScrollSnap from "react-use-scroll-snap";
+
 const ThemeContext = createContext(null);
 
 const About = lazy(() => import("./components/About"));
@@ -42,6 +46,9 @@ const Delegate = lazy(() => import("./components/Delegate"));
 function App() {
   const [isDarkMode, setDarkMode] = useLocalStorage("isDarkMode", true);
   const [theme, setTheme] = useLocalStorage("theme", "dark");
+
+  const scrollRef = useRef(null);
+  useScrollSnap({ ref: scrollRef, duration: 50, delay: 20 });
 
   const toggleDarkMode = (isDarkMode) => {
     const newTheme = theme === "dark" ? "light" : "dark";
@@ -82,7 +89,7 @@ function App() {
         id={theme}
         className="test"
       >
-        <div className="wrapper">
+        <div className="wrapper" ref={scrollRef}>
           <div className="header" id="header">
             <div className="nav-main">
               <Link
@@ -167,7 +174,7 @@ function App() {
                     componentsProps={{
                       tooltip: {
                         sx: {
-                          fontSize: "14px",
+                          fontSize: "18px",
                           fontFamily: "inherit",
                           fontWeight: "bold",
                           backgroundColor: "#171b20",
@@ -194,7 +201,7 @@ function App() {
                     componentsProps={{
                       tooltip: {
                         sx: {
-                          fontSize: "14px",
+                          fontSize: "18px",
                           fontFamily: "inherit",
                           fontWeight: "bold",
                           backgroundColor: "#171b20",
@@ -221,7 +228,7 @@ function App() {
                     componentsProps={{
                       tooltip: {
                         sx: {
-                          fontSize: "14px",
+                          fontSize: "18px",
                           fontFamily: "inherit",
                           fontWeight: "bold",
                           backgroundColor: "#171b20",
@@ -275,7 +282,7 @@ function App() {
                     componentsProps={{
                       tooltip: {
                         sx: {
-                          fontSize: "14px",
+                          fontSize: "18px",
                           fontFamily: "inherit",
                           fontWeight: "bold",
                           backgroundColor: "#171b20",
@@ -302,7 +309,7 @@ function App() {
                     componentsProps={{
                       tooltip: {
                         sx: {
-                          fontSize: "14px",
+                          fontSize: "18px",
                           fontFamily: "inherit",
                           fontWeight: "bold",
                           backgroundColor: "#171b20",
@@ -414,6 +421,7 @@ function App() {
               <About />
             </LazyLoad>
           </div>
+          <ScrollButton />
           <div id="research">
             <LazyLoad height={1600}>
               <Research />
@@ -424,6 +432,8 @@ function App() {
               <Dashboards />
             </LazyLoad>
           </div>
+          <ScrollButton />
+
           <div id="delegate">
             <LazyLoad>
               <Delegate />

@@ -479,3 +479,9 @@ body {
 .foot {
   margin-top: -50px;
 }
+
+.breaker {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}

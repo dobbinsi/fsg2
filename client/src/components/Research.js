@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Typewriter from "typewriter-effect";
 import axios from "axios";
 
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions, Fade } from "@mui/material";
+import { CardActionArea, Fade } from "@mui/material";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -61,32 +60,27 @@ function Research() {
     <>
       <div className="intro3">
         <div className="typewriter2">
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter
-                .typeString(
-                  "We are committed to ushering in the next frontier of decentralized organizations. We're crypto-native, we're passionate about what we do, and we hail from a diverse set of backgrounds. By leveraging our experience in DeFi, political science, traditional finance, and data engineering, we are uniquely positioned to help DAOs scale. We publish in-depth research on a weekly basis."
-                )
-                .start();
-            }}
-            options={{
-              delay: 48,
-              wrapperClassName: "type2",
-              cursorClassName: "type-cursor2",
-            }}
-          />
+          <p className="type2">
+            We are committed to ushering in the next frontier of decentralized
+            organizations. We're crypto-native, we're passionate about what we
+            do, and we hail from a diverse set of backgrounds. By leveraging our
+            experience in DeFi, political science, traditional finance, and data
+            engineering, we are uniquely positioned to help DAOs scale. We
+            publish in-depth research on a weekly basis.
+          </p>
         </div>
-        <Fade in={true} timeout={4000} style={{ transitionDelay: "19000ms" }}>
+        <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
           <div className="values">
             <h1>LATEST RESEARCH</h1>
             <div className="research-cards">
-              <div style={{ position: "relative", marginLeft: 55 }}>
+              <div style={{ position: "relative" }}>
                 <Carousel
                   responsive={responsive}
                   focusOnSelect={true}
                   infinite={true}
                   autoPlay={true}
-                  arrows={false}
+                  renderButtonGroupOutside={true}
+                  // arrows={false}
                   className="carooo"
                 >
                   {blogData.map((post, index) => (
@@ -94,7 +88,11 @@ function Research() {
                       sx={{ width: 350, borderRadius: 3 }}
                       className="dbcard"
                     >
-                      <CardActionArea>
+                      <CardActionArea
+                        href={post.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <CardMedia
                           component="img"
                           height="150"
@@ -125,25 +123,6 @@ function Research() {
                           </Typography>
                         </CardContent>
                       </CardActionArea>
-                      <CardActions
-                        sx={{
-                          display: "flex",
-                          justifyContent: "end",
-                          backgroundColor: "#171b20",
-                          color: "#fff",
-                        }}
-                      >
-                        <Button
-                          size="small"
-                          color="primary"
-                          href={post.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          sx={{ fontFamily: "inherit" }}
-                        >
-                          Read More
-                        </Button>
-                      </CardActions>
                     </Card>
                   ))}
                 </Carousel>
@@ -151,13 +130,14 @@ function Research() {
             </div>
             <h1>WEEKLY ACTIVITY</h1>
             <div className="research-cards">
-              <div style={{ position: "relative", marginLeft: 55 }}>
+              <div style={{ position: "relative" }}>
                 <Carousel
                   responsive={responsive}
                   focusOnSelect={true}
                   infinite={true}
                   autoPlay={true}
-                  arrows={false}
+                  renderButtonGroupOutside={true}
+                  // arrows={false}
                   className="carooo"
                 >
                   {recapData.map((post, index) => (
@@ -165,7 +145,11 @@ function Research() {
                       sx={{ width: 350, borderRadius: 3 }}
                       className="dbcard"
                     >
-                      <CardActionArea>
+                      <CardActionArea
+                        href={post.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <CardMedia
                           component="img"
                           height="150"
@@ -196,25 +180,6 @@ function Research() {
                           </Typography>
                         </CardContent>
                       </CardActionArea>
-                      <CardActions
-                        sx={{
-                          display: "flex",
-                          justifyContent: "end",
-                          backgroundColor: "#171b20",
-                          color: "#fff",
-                        }}
-                      >
-                        <Button
-                          size="small"
-                          color="primary"
-                          href={post.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          sx={{ fontFamily: "inherit" }}
-                        >
-                          Read More
-                        </Button>
-                      </CardActions>
                     </Card>
                   ))}
                 </Carousel>
