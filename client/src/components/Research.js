@@ -61,17 +61,14 @@ function Research() {
       <div className="intro3">
         <div className="typewriter2">
           <p className="type2">
-            We are committed to ushering in the next frontier of decentralized
-            organizations. We're crypto-native, we're passionate about what we
-            do, and we hail from a diverse set of backgrounds. By leveraging our
-            experience in DeFi, political science, traditional finance, and data
-            engineering, we are uniquely positioned to help DAOs scale. We
-            publish in-depth research on a weekly basis.
+            By leveraging our experience in DeFi, political science, traditional
+            finance, and data engineering, we are uniquely positioned to help
+            DAOs scale. We publish in-depth research on a weekly basis.
           </p>
         </div>
         <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
           <div className="values">
-            <h1>LATEST RESEARCH</h1>
+            <h1 className="caroo-title">LATEST RESEARCH</h1>
             <div className="research-cards">
               <div style={{ position: "relative" }}>
                 <Carousel
@@ -128,7 +125,7 @@ function Research() {
                 </Carousel>
               </div>
             </div>
-            <h1>WEEKLY ACTIVITY</h1>
+            <h1 className="caroo-title">WEEKLY ACTIVITY</h1>
             <div className="research-cards">
               <div style={{ position: "relative" }}>
                 <Carousel

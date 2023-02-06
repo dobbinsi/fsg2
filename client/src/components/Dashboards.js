@@ -34,15 +34,13 @@ function Dashboards() {
     <div className="intro">
       <div className="typewriter2">
         <p className="type2">
-          Leveraging Flipside's core competencies, we also build dashboards and
-          tooling to increase both transparency and the governance UX of the
-          communities that we serve. To us, participating in governance is much
-          more than acquiring tokens and voting on proposals.
+          We are builders. To us, participating in governance is much more than
+          acquiring tokens and voting on proposals.
         </p>
       </div>
       <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
         <div className="values">
-          <h1>TOOLS & DASHBOARDS</h1>
+          <h1 className="valuesh1">TOOLS & DASHBOARDS</h1>
           <div className="dashb">
             <div className="dbleft">
               <Card

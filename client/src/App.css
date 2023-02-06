@@ -40,7 +40,7 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .nav-main {
@@ -50,20 +50,20 @@ body {
 
 .navlink {
   margin-right: 70px;
-  font-size: medium;
+  font-size: large;
   text-decoration: none;
   color: #fff;
 }
 
 .navlink2 {
-  font-size: medium;
+  font-size: large;
   text-decoration: none;
   color: #fff;
 }
 
 .navlink:visited {
   margin-right: 70px;
-  font-size: medium;
+  font-size: large;
   text-decoration: none;
   color: #fff;
 }
@@ -107,10 +107,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 120px;
+  margin-top: 200px;
+}
+
+.lglg {
+  text-align: center;
 }
 
 .fslogo {
+  width: 80%;
+}
+
+/* .fslogo {
   height: 400px;
   width: 400px;
   filter: blur(20px);
@@ -126,7 +134,7 @@ body {
   -webkit-filter: blur(0px);
   transition: 0.3s ease;
   transform: translateZ(40px) scale(0.8);
-}
+} */
 
 .typewriter {
   margin: auto;
@@ -156,12 +164,18 @@ body {
 .socialscroll {
   display: flex;
   justify-content: space-between;
-  margin-top: 12%;
+  margin-top: 20%;
   /* border: 2px solid red; */
 }
 
 .socials {
   display: flex;
+  gap: 25px;
+}
+
+.socials-ct {
+  display: flex;
+  justify-content: center;
   gap: 25px;
 }
 
@@ -175,7 +189,7 @@ body {
   font-size: large;
 }
 
-.intro {
+/* .intro {
   margin-top: 200px;
   min-height: 800px;
 }
@@ -188,7 +202,7 @@ body {
 .intro3 {
   margin-top: 900px;
   min-height: 800px;
-}
+} */
 
 .typewriter2 {
   margin: auto;
@@ -211,15 +225,24 @@ body {
   margin-top: 100px;
 }
 
-.values h1 {
+.valuesh1 {
   text-align: center;
   font-size: xx-large;
   font-weight: normal;
   margin-bottom: 60px;
 }
 
+.caroo-title {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: normal;
+}
+
 #dele {
   margin-bottom: 80px;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: normal;
 }
 
 .dbcard {
@@ -484,4 +507,121 @@ body {
   display: flex;
   justify-content: center;
   height: 50px;
+  margin-top: 5%;
+  margin-bottom: 20%;
+  opacity: 0.4;
+}
+
+.breaker2 {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  opacity: 0.4;
+  margin-top: 100px;
+}
+
+#home {
+  height: fit-content;
+  margin-bottom: 20%;
+}
+
+#about {
+  height: fit-content;
+}
+
+#research {
+  height: fit-content;
+}
+
+#dashboards {
+  height: fit-content;
+}
+
+#delegate {
+  height: fit-content;
+  margin-bottom: 5%;
+}
+
+#contact {
+  height: fit-content;
+}
+
+#ct {
+  margin-top: 100px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: normal;
+}
+
+.contact-main {
+  width: 90%;
+  height: 430px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: #171b20;
+  border-radius: 10px;
+}
+
+.contact-logo {
+  width: 45%;
+  text-align: center;
+}
+
+.contact-form {
+  width: 45%;
+}
+
+form {
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.feedback-input {
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #949494;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid #5cede5;
+}
+
+textarea {
+  height: 135px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background: #5cede5;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  /* color: #fff; */
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+[type="submit"]:hover {
+  background: #45cec7;
+}
+
+.ct-logo {
+  height: 81%;
+  margin: auto;
 }

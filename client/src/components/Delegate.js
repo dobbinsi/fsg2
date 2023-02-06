@@ -13,12 +13,11 @@ function Delegate() {
     <div className="intro5">
       <div className="typewriter2">
         <p className="type2">
-          We are a full time governance team and we're committed to using our
-          experience to improve DAOs, one proposal at a time. Through active
-          participation, we've developed key understandings around the needs and
-          flow of information in the governance process. Our dedication to
-          support and contribute in our partner communities allows us to improve
-          outcomes for everyone, and we'd be honored to vote on your behalf.
+          Through active participation, we've developed key understandings
+          around the needs and flow of information in the governance process.
+          Our dedication to support and contribute in our partner communities
+          allows us to improve outcomes for everyone, and we'd be honored to
+          vote on your behalf.
         </p>
       </div>
 
@@ -111,7 +110,6 @@ function Delegate() {
               </div>
             </div>
           </div>
-          <Footer />
         </div>
       </Fade>
     </div>

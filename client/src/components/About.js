@@ -1,5 +1,6 @@
 import React from "react";
 import fsgservices from "../logos/fsgservices.png";
+import fsgservices2 from "../logos/fsg_services2.png";
 
 import { Fade } from "@mui/material";
 
@@ -10,14 +11,12 @@ function About() {
         <p className="type2">
           Flipside is an ecosystem growth partner. Our governance team serves as
           a Professional Delegate, supporting the proliferation and function of
-          decentralized organizations through rational decision-making, proposal
-          creation and analytics. We bring clarity to DAOs by unlocking product,
-          social and tokenholder value.
+          decentralized organizations.
         </p>
       </div>
       <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
         <div className="values">
-          <h1>WHO WE ARE</h1>
+          <h1 className="valuesh1">WHO WE ARE</h1>
           <div class="container1">
             <div class="card">
               <h3 class="title">Authentic</h3>
@@ -80,9 +79,9 @@ function About() {
       </Fade>
       <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
         <div className="values">
-          <h1 id="what">WHAT WE DO</h1>
+          <h1 className="valuesh1">WHAT WE DO</h1>
           <div className="dgholder">
-            <img src={fsgservices} alt="services" className="services" />
+            <img src={fsgservices2} alt="services" className="services" />
           </div>
         </div>
       </Fade>
