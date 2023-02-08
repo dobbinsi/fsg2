@@ -7,6 +7,7 @@ import { Fade } from "@mui/material";
 function About() {
   return (
     <div className="intro">
+      <h1 className="bigletters">01: WHO WE ARE</h1>
       <div className="typewriter2">
         <p className="type2">
           Flipside is an ecosystem growth partner. Our governance team serves as
@@ -16,10 +17,9 @@ function About() {
       </div>
       <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
         <div className="values">
-          <h1 className="valuesh1">WHO WE ARE</h1>
           <div class="container1">
             <div class="card">
-              <h3 class="title">Authentic</h3>
+              <h3 class="title">We are Authentic</h3>
               <div class="bar">
                 <div class="emptybar"></div>
                 <div class="filledbar"></div>
@@ -30,7 +30,7 @@ function About() {
               </div>
             </div>
             <div class="card">
-              <h3 class="title">Rational</h3>
+              <h3 class="title">We are Rational</h3>
               <div class="bar">
                 <div class="emptybar"></div>
                 <div class="filledbar"></div>
@@ -42,7 +42,7 @@ function About() {
               </div>
             </div>
             <div class="card">
-              <h3 class="title">Human</h3>
+              <h3 class="title">We are Human</h3>
               <div class="bar">
                 <div class="emptybar"></div>
                 <div class="filledbar"></div>
@@ -53,7 +53,7 @@ function About() {
               </div>
             </div>
             <div class="card">
-              <h3 class="title">Curious</h3>
+              <h3 class="title">We are Curious</h3>
               <div class="bar">
                 <div class="emptybar"></div>
                 <div class="filledbar"></div>
@@ -64,7 +64,7 @@ function About() {
               </div>
             </div>
             <div class="card">
-              <h3 class="title">Loyal</h3>
+              <h3 class="title">We are Loyal</h3>
               <div class="bar">
                 <div class="emptybar"></div>
                 <div class="filledbar"></div>
@@ -74,14 +74,6 @@ function About() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </Fade>
-      <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
-        <div className="values">
-          <h1 className="valuesh1">WHAT WE DO</h1>
-          <div className="dgholder">
-            <img src={fsgservices2} alt="services" className="services" />
           </div>
         </div>
       </Fade>

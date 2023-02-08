@@ -25,12 +25,12 @@ import { Tooltip, Zoom } from "@mui/material";
 
 import useScrollSnap from "react-use-scroll-snap";
 import Landing from "./components/Landing";
-// import Contact from "./components/Contact";
 import ScrollButton2 from "./components/ScrollButton2";
 
 const ThemeContext = createContext(null);
 
 const About = lazy(() => import("./components/About"));
+const About2 = lazy(() => import("./components/About2"));
 const Research = lazy(() => import("./components/Research"));
 const Dashboards = lazy(() => import("./components/Dashboards"));
 const Delegate = lazy(() => import("./components/Delegate"));
@@ -84,78 +84,12 @@ function App() {
         ref={scrollRef}
       >
         <div className="wrapper">
-          <div className="header" id="header">
-            <div className="nav-main">
-              <Link
-                activeClass="active"
-                className="navlink"
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                About
-              </Link>
-              <Link
-                activeClass="active"
-                className="navlink"
-                to="research"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                Research
-              </Link>
-
-              <Link
-                activeClass="active"
-                className="navlink"
-                to="dashboards"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                Tools
-              </Link>
-              <Link
-                activeClass="active"
-                className="navlink"
-                to="delegate"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                Delegate
-              </Link>
-              <Link
-                activeClass="active"
-                className="navlink"
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                Contact
-              </Link>
-            </div>
-            <DarkModeSwitch
-              checked={isDarkMode}
-              onChange={toggleDarkMode}
-              size={18}
-              className="moon"
-            />
-          </div>
           {isVisible && (
             <div className="TimelineIndicator_container">
               <Link
                 activeClass="active"
                 className="iconos"
-                to="header"
+                to="home"
                 spy={true}
                 smooth={true}
                 offset={-100}
@@ -163,7 +97,7 @@ function App() {
               >
                 <Tooltip
                   TransitionComponent={Zoom}
-                  title="Home"
+                  title="00: HOME"
                   placement="left"
                   componentsProps={{
                     tooltip: {
@@ -190,7 +124,34 @@ function App() {
               >
                 <Tooltip
                   TransitionComponent={Zoom}
-                  title="About"
+                  title="01: WHO WE ARE"
+                  placement="left"
+                  componentsProps={{
+                    tooltip: {
+                      sx: {
+                        fontSize: "18px",
+                        fontFamily: "inherit",
+                        fontWeight: "bold",
+                        backgroundColor: "#171b20",
+                      },
+                    },
+                  }}
+                >
+                  <FontAwesomeIcon icon={faCircle} size="2xs" />
+                </Tooltip>
+              </Link>
+              <Link
+                activeClass="active"
+                className="iconos"
+                to="about2"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                <Tooltip
+                  TransitionComponent={Zoom}
+                  title="02: WHAT WE DO"
                   placement="left"
                   componentsProps={{
                     tooltip: {
@@ -217,7 +178,7 @@ function App() {
               >
                 <Tooltip
                   TransitionComponent={Zoom}
-                  title="Research"
+                  title="03: RESEARCH"
                   placement="left"
                   componentsProps={{
                     tooltip: {
@@ -245,7 +206,7 @@ function App() {
               >
                 <Tooltip
                   TransitionComponent={Zoom}
-                  title="Tools"
+                  title="04: TOOLS"
                   placement="left"
                   componentsProps={{
                     tooltip: {
@@ -272,7 +233,7 @@ function App() {
               >
                 <Tooltip
                   TransitionComponent={Zoom}
-                  title="Delegate"
+                  title="05: DELEGATE"
                   placement="left"
                   componentsProps={{
                     tooltip: {
@@ -299,7 +260,7 @@ function App() {
               >
                 <Tooltip
                   TransitionComponent={Zoom}
-                  title="Contact"
+                  title="06: CONTACT US"
                   placement="left"
                   componentsProps={{
                     tooltip: {
@@ -325,6 +286,13 @@ function App() {
           <div id="about">
             <LazyLoad>
               <About />
+            </LazyLoad>
+          </div>
+          <ScrollButton />
+
+          <div id="about2">
+            <LazyLoad>
+              <About2 />
             </LazyLoad>
           </div>
           <ScrollButton />

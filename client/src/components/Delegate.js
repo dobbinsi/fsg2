@@ -11,6 +11,8 @@ import Footer from "./Footer";
 function Delegate() {
   return (
     <div className="intro5">
+      <h1 className="bigletters">05: DELEGATE TO FLIPSIDE</h1>
+
       <div className="typewriter2">
         <p className="type2">
           Through active participation, we've developed key understandings
@@ -23,7 +25,7 @@ function Delegate() {
 
       <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
         <div className="values">
-          <h1 id="dele">DELEGATE TO FLIPSIDE</h1>
+          {/* <h1 id="dele">DELEGATE TO FLIPSIDE</h1> */}
           <div class="container2">
             <div class="card2">
               <div class="face face1">

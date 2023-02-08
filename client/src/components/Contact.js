@@ -14,13 +14,15 @@ import {
 function Contact() {
   return (
     <div className="values">
-      <div className="typewriter2">
+      <h1 className="bigletters">06: CONTACT US</h1>
+
+      <div className="typewriter4">
         <p className="type2">
           Want to get in touch? Drop us a note below! We'd be happy to chat with
           you about the future of decentralized organizations.
         </p>
       </div>
-      <h1 id="ct">CONTACT US</h1>{" "}
+      {/* <h1 id="ct">CONTACT US</h1>{" "} */}
       <div className="contact-main">
         <div className="contact-logo">
           <img src={fsgwhite2} className="ct-logo" />

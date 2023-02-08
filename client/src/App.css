@@ -32,13 +32,25 @@ body {
 }
 
 .wrapper {
-  width: 85%;
+  /* width: 85%; */
   margin: auto;
-  padding: 30px;
+  /* padding: 30px; */
   background-color: transparent;
 }
 
+/* .lander {
+  background-image: url("./logos/bwb.png");
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+} */
+
 .header {
+  width: 85%;
+  margin: auto;
+  padding: 30px;
   display: flex;
   justify-content: flex-end;
 }
@@ -49,7 +61,7 @@ body {
 }
 
 .navlink {
-  margin-right: 70px;
+  margin-left: 70px;
   font-size: large;
   text-decoration: none;
   color: #fff;
@@ -62,7 +74,7 @@ body {
 }
 
 .navlink:visited {
-  margin-right: 70px;
+  margin-left: 70px;
   font-size: large;
   text-decoration: none;
   color: #fff;
@@ -107,15 +119,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 .lglg {
   text-align: center;
+  background: rgba(45, 45, 45, 0.226);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 12px 2px #fff; */
 }
 
 .fslogo {
-  width: 80%;
+  height: 400px;
+  width: 500px;
 }
 
 /* .fslogo {
@@ -162,15 +179,26 @@ body {
 }
 
 .socialscroll {
+  width: 85%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
-  margin-top: 20%;
+  margin-top: 10%;
+  padding-bottom: 30px;
   /* border: 2px solid red; */
 }
 
 .socials {
+  height: 30px;
+  padding: 10px;
   display: flex;
+  align-items: center;
   gap: 25px;
+  background: rgba(45, 45, 45, 0.226);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-radius: 10px;
+  transition: 0.3s ease;
+  box-shadow: 0px 0px 12px 2px #fff;
 }
 
 .socials-ct {
@@ -180,9 +208,19 @@ body {
 }
 
 .scroll {
+  height: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
   display: flex;
   justify-content: center;
   gap: 10px;
+  border-radius: 10px;
+
+  background: rgba(45, 45, 45, 0.226);
+  backdrop-filter: saturate(180%) blur(8px);
+  transition: 0.3s ease;
+  box-shadow: 0px 0px 12px 2px #fff;
 }
 
 .text-vert {
@@ -209,6 +247,14 @@ body {
   width: 50%;
   display: flex;
   justify-content: center;
+}
+
+.typewriter4 {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 
 .type2 {
@@ -479,10 +525,6 @@ body {
   color: #5cede5;
 }
 
-.research-cards {
-  padding: 50px;
-}
-
 .carooo {
   padding: 20px;
 }
@@ -508,7 +550,7 @@ body {
   justify-content: center;
   height: 50px;
   margin-top: 5%;
-  margin-bottom: 20%;
+  margin-bottom: 50%;
   opacity: 0.4;
 }
 
@@ -522,28 +564,43 @@ body {
 
 #home {
   height: fit-content;
-  margin-bottom: 20%;
+  margin-bottom: 50%;
+  background-image: url("./logos/fsbw9.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 #about {
   height: fit-content;
+  width: 85%;
+  margin: auto;
 }
 
 #research {
   height: fit-content;
+  width: 85%;
+  margin: auto;
 }
 
 #dashboards {
   height: fit-content;
+  width: 85%;
+  margin: auto;
 }
 
 #delegate {
   height: fit-content;
+  width: 85%;
+  margin: auto;
   margin-bottom: 5%;
 }
 
 #contact {
   height: fit-content;
+  width: 85%;
+  margin: auto;
 }
 
 #ct {
@@ -555,6 +612,7 @@ body {
 }
 
 .contact-main {
+  margin-top: 60px;
   width: 90%;
   height: 430px;
   margin: auto;
@@ -623,5 +681,16 @@ textarea {
 
 .ct-logo {
   height: 81%;
+  margin: auto;
+}
+
+.bigletters {
+  font-size: 55px;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.toggler {
+  width: fit-content;
   margin: auto;
 }

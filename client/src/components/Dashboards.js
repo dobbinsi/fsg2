@@ -32,15 +32,17 @@ function Dashboards() {
 
   return (
     <div className="intro">
+      <h1 className="bigletters">04: TOOLS & DASHBOARDS</h1>
       <div className="typewriter2">
         <p className="type2">
-          We are builders. To us, participating in governance is much more than
-          acquiring tokens and voting on proposals.
+          We build tools and dashboards to help users gain a better
+          understanding of protocol governance and monitor trends in voting
+          activity.
         </p>
       </div>
       <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
         <div className="values">
-          <h1 className="valuesh1">TOOLS & DASHBOARDS</h1>
+          {/* <h1 className="valuesh1">TOOLS & DASHBOARDS</h1> */}
           <div className="dashb">
             <div className="dbleft">
               <Card
