@@ -58,10 +58,25 @@ body {
 .nav-main {
   display: flex;
   justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  background: rgba(45, 45, 45, 0.226);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-radius: 10px;
+  transition: 0.3s ease;
+  box-shadow: 0px 0px 12px 2px #fff;
 }
 
 .navlink {
   margin-left: 70px;
+  font-size: large;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navlink8 {
+  margin-left: 70px;
+  margin-right: 70px;
   font-size: large;
   text-decoration: none;
   color: #fff;
@@ -81,6 +96,29 @@ body {
 }
 
 .navlink:hover {
+  color: #5cede5;
+  cursor: pointer;
+}
+
+.navlink2:visited {
+  margin-left: 70px;
+  font-size: large;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navlink2:hover {
+  color: #5cede5;
+  cursor: pointer;
+}
+.navlink8:visited {
+  margin-left: 70px;
+  font-size: large;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navlink8:hover {
   color: #5cede5;
   cursor: pointer;
 }
@@ -127,6 +165,17 @@ body {
   background: rgba(45, 45, 45, 0.226);
   backdrop-filter: saturate(180%) blur(8px);
   border-radius: 10px;
+  /* box-shadow: 0px 0px 12px 2px #fff; */
+}
+
+.lglg:hover {
+  text-align: center;
+  background: rgba(45, 45, 45, 0.226);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-radius: 10px;
+  transition: 0.3s;
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 8px 2px #fff;
   /* box-shadow: 0px 0px 12px 2px #fff; */
 }
 
@@ -267,8 +316,29 @@ body {
   display: none;
 }
 
+#servy {
+  margin-bottom: 100px;
+}
+
 .values {
   margin-top: 100px;
+}
+
+.values3 {
+  border: 2px solid gray;
+  border-radius: 10px;
+  width: 85%;
+  min-height: 335px;
+  margin: auto;
+}
+
+.title-box {
+  position: relative;
+  top: -0.5em;
+  margin-left: 1em;
+  display: inline;
+  background-color: #000;
+  font-size: larger;
 }
 
 .valuesh1 {
@@ -551,7 +621,7 @@ body {
   height: 50px;
   margin-top: 5%;
   margin-bottom: 50%;
-  opacity: 0.4;
+  /* opacity: 0.4; */
 }
 
 .breaker2 {
@@ -565,7 +635,8 @@ body {
 #home {
   height: fit-content;
   margin-bottom: 50%;
-  background-image: url("./logos/fsbw9.png");
+  background-image: url("./logos/fsbw33.png");
+  background-position: initial;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -719,6 +790,26 @@ textarea {
 .top-service {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.top-service2 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.bot-service {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.bot-service2 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
   margin-bottom: 50px;
 }
 
@@ -741,4 +832,76 @@ textarea {
   height: 100%;
   width: 100%;
   opacity: 0.09;
+}
+
+@-webkit-keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.shadow {
+  margin-top: 100px;
+  margin-bottom: 90px;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(5px 5px 150px #fff) drop-shadow(-10px -10px 50px #fff);
+}
+
+.triangle-wrapper {
+  width: 20vw;
+  height: 20vh;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: pulsate-fwd 2s ease-in-out infinite both;
+  animation: pulsate-fwd 2s ease-in-out infinite both;
+}
+
+.triangle {
+  width: 15vw;
+  height: 15vh;
+  background-color: black;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  margin-top: -10px;
+  filter: blur(70px) drop-shadow(-10px -10px 75px #fff);
+}
+
+.plogos {
+  width: 211px;
+  height: 41px;
+}
+
+.plogos:hover {
+  width: 211px;
+  height: 41px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }

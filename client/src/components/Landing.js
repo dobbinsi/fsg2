@@ -76,7 +76,7 @@ function Landing() {
           </Link>
           <Link
             activeClass="active"
-            className="navlink"
+            className="navlink8"
             to="contact"
             spy={true}
             smooth={true}

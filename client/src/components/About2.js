@@ -1,6 +1,4 @@
 import React from "react";
-import fsgservices from "../logos/fsgservices.png";
-import fsgservices2 from "../logos/fsg_services2.png";
 
 import { Fade } from "@mui/material";
 
@@ -10,30 +8,35 @@ import {
   faChartSimple,
   faHandshakeSimple,
   faScroll,
-  faLightbulb,
   faGear,
   faCheckToSlot,
   faLandmark,
 } from "@fortawesome/free-solid-svg-icons";
 
+import aavegray from "../logos/aavegray.png";
+import axelargray from "../logos/axelargray2.png";
+import cosmosgray from "../logos/cosmosgray.png";
+import hopgray from "../logos/hopgray.png";
+import junogray from "../logos/junogray.png";
+import mkrgray from "../logos/mkrgray.png";
+import mndegray from "../logos/mndegray.png";
+import opgray from "../logos/opgray.png";
+import osmogray from "../logos/osmogray.png";
+
 function About() {
   return (
     <div className="intro">
       <h1 className="bigletters">02: WHAT WE DO</h1>
-      <div className="typewriter2">
+      <div className="typewriter2" id="servy">
         <p className="type2">
           To us, participating in governance is much more than acquiring tokens
           and voting on proposals. We bring much more to the table.
         </p>
       </div>
       {/* <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}> */}
-      <div className="values">
-        <div className="dgholder">
-          <img src={fsgservices2} alt="services" className="services" />
-        </div>
-      </div>
-      <div className="values">
-        <h1>HELLO</h1>
+
+      <div className="values3">
+        <div className="title-box">OUR SERVICES</div>
         <div className="top-service">
           <div className="service">
             <div className="iconhouse">
@@ -75,7 +78,7 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="top-service">
+        <div className="bot-service">
           <div className="service">
             <div className="iconhouse">
               <FontAwesomeIcon
@@ -120,7 +123,7 @@ function About() {
               <FontAwesomeIcon
                 icon={faHandshakeSimple}
                 color="#f0ffff"
-                size="xl" 
+                size="xl"
                 className="iconos"
               />
             </div>
@@ -130,9 +133,28 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="values99">
-        .
+      <div class="shadow">
+        <div class="triangle-wrapper">
+          <div class="triangle"></div>
+        </div>
       </div>
+      <div className="values3">
+        <div className="title-box">OUR PARTNERS</div>
+        <div className="top-service">
+          <img src={aavegray} className="plogos" alt="aave" />
+          <img src={mkrgray} className="plogos" alt="maker" />
+          <img src={opgray} className="plogos" alt="op" />
+          <img src={hopgray} className="plogos" alt="hop" />
+        </div>
+        <div className="bot-service2">
+          <img src={axelargray} className="plogos" alt="axelar" />
+          <img src={osmogray} className="plogos" alt="osmo" />
+          <img src={cosmosgray} className="plogos" alt="cosmos" />
+          <img src={mndegray} className="plogos" alt="mnde" />
+          <img src={junogray} className="plogos" alt="juno" />
+        </div>
+      </div>
+
       {/* </Fade> */}
     </div>
   );
