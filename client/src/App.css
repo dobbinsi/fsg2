@@ -620,6 +620,7 @@ body {
   justify-content: center;
   background-color: #171b20;
   border-radius: 10px;
+  box-shadow: 0px 0px 12px 2px #fff;
 }
 
 .contact-logo {
@@ -693,4 +694,51 @@ textarea {
 .toggler {
   width: fit-content;
   margin: auto;
+}
+
+.service {
+  height: 80px;
+  width: 200px;
+  border: 2px solid #5cede5;
+  display: flex;
+  border-radius: 10px;
+}
+
+.service:hover {
+  height: 80px;
+  width: 200px;
+  border: 2px solid #5cede5;
+  display: flex;
+  border-radius: 10px;
+  transition: 0.3s;
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 8px 2px #fff;
+  color: #5cede5;
+}
+
+.top-service {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+.iconhouse {
+  padding: 10px;
+}
+
+.service-title {
+  margin-left: -10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.values99 {
+  min-height: 500px;
+  background-image: url("./logos/dflow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  opacity: 0.09;
 }

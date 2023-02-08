@@ -26,6 +26,11 @@ import { Tooltip, Zoom } from "@mui/material";
 import useScrollSnap from "react-use-scroll-snap";
 import Landing from "./components/Landing";
 import ScrollButton2 from "./components/ScrollButton2";
+import ScrollButton5 from "./components/ScrollButton5";
+import ScrollButton6 from "./components/ScrollButton6";
+import ScrollButton7 from "./components/ScrollButton7";
+import ScrollButton8 from "./components/ScrollButton8";
+import ScrollButton9 from "./components/ScrollButton9";
 
 const ThemeContext = createContext(null);
 
@@ -288,32 +293,32 @@ function App() {
               <About />
             </LazyLoad>
           </div>
-          <ScrollButton />
+          <ScrollButton5 />
 
           <div id="about2">
             <LazyLoad>
               <About2 />
             </LazyLoad>
           </div>
-          <ScrollButton />
+          <ScrollButton6 />
           <div id="research">
             <LazyLoad>
               <Research />
             </LazyLoad>
           </div>
-          <ScrollButton />
+          <ScrollButton7 />
           <div id="dashboards">
             <LazyLoad>
               <Dashboards />
             </LazyLoad>
           </div>
-          <ScrollButton />
+          <ScrollButton8 />
           <div id="delegate">
             <LazyLoad>
               <Delegate />
             </LazyLoad>
           </div>
-          <ScrollButton />
+          <ScrollButton9 />
           <div id="contact">
             <LazyLoad>
               <Contact />
