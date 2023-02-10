@@ -24,96 +24,96 @@ function Delegate() {
         </div>
       </div>
       {/* </Slide> */}
-      <Fade in={true} timeout={4000} style={{ transitionDelay: "100ms" }}>
-        <div className="values">
-          <div class="container2">
-            <div class="card2">
-              <div class="face face1">
-                <div class="content">
-                  <img src={mkr} alt="mkr" />
-                  <h3>MakerDAO</h3>
-                </div>
-              </div>
-              <div class="face face2">
-                <div class="content2">
-                  <p>Flipside is a top 10 delegate by total voting power.</p>
-                  <a
-                    href="https://vote.makerdao.com/address/0x84b05b0a30b6ae620f393d1037f217e607ad1b96#delegate-credentials"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hoverjawn"
-                  >
-                    Delegate MKR
-                  </a>
-                </div>
+      {/* <Fade in={true} timeout={4000} style={{ transitionDelay: "100ms" }}> */}
+      <div className="values">
+        <div class="container2">
+          <div class="card2">
+            <div class="face face1">
+              <div class="content">
+                <img src={mkr} alt="mkr" />
+                <h3>MakerDAO</h3>
               </div>
             </div>
-            <div class="card2">
-              <div class="face face1">
-                <div class="content">
-                  <img src={aave} alt="aave" />
-                  <h3>Aave</h3>
-                </div>
-              </div>
-              <div class="face face2">
-                <div class="content2">
-                  <p>Flipside is a top 10 delegate by total voting power.</p>
-                  <a
-                    href="https://governance.aave.com/t/flipside-crypto-delegate-platform/9193?u=fig"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hoverjawn"
-                  >
-                    Delegate AAVE
-                  </a>
-                </div>
+            <div class="face face2">
+              <div class="content2">
+                <p>Flipside is a top 10 delegate by total voting power.</p>
+                <a
+                  href="https://vote.makerdao.com/address/0x84b05b0a30b6ae620f393d1037f217e607ad1b96#delegate-credentials"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hoverjawn"
+                >
+                  Delegate MKR
+                </a>
               </div>
             </div>
-            <div class="card2">
-              <div class="face face1">
-                <div class="content">
-                  <img src={op} alt="op" />
-                  <h3>Optimism</h3>
-                </div>
-              </div>
-              <div class="face face2">
-                <div class="content2">
-                  <p>Flipside is a top 20 delegate by total voting power.</p>
-                  <a
-                    href="https://app.optimism.io/delegates?search=flipside"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hoverjawn"
-                  >
-                    Delegate OP
-                  </a>
-                </div>
+          </div>
+          <div class="card2">
+            <div class="face face1">
+              <div class="content">
+                <img src={aave} alt="aave" />
+                <h3>Aave</h3>
               </div>
             </div>
-            <div class="card2">
-              <div class="face face1">
-                <div class="content">
-                  <img src={hop} alt="hop" />
-                  <h3>Hop</h3>
-                </div>
+            <div class="face face2">
+              <div class="content2">
+                <p>Flipside is a top 10 delegate by total voting power.</p>
+                <a
+                  href="https://governance.aave.com/t/flipside-crypto-delegate-platform/9193?u=fig"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hoverjawn"
+                >
+                  Delegate AAVE
+                </a>
               </div>
-              <div class="face face2">
-                <div class="content2">
-                  <p>Flipside is a top 20 delegate by total voting power.</p>
-                  <a
-                    href="https://www.tally.xyz/gov/hop"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hoverjawn"
-                  >
-                    Delegate HOP
-                  </a>
-                </div>
+            </div>
+          </div>
+          <div class="card2">
+            <div class="face face1">
+              <div class="content">
+                <img src={op} alt="op" />
+                <h3>Optimism</h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content2">
+                <p>Flipside is a top 20 delegate by total voting power.</p>
+                <a
+                  href="https://app.optimism.io/delegates?search=flipside"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hoverjawn"
+                >
+                  Delegate OP
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card2">
+            <div class="face face1">
+              <div class="content">
+                <img src={hop} alt="hop" />
+                <h3>Hop</h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content2">
+                <p>Flipside is a top 20 delegate by total voting power.</p>
+                <a
+                  href="https://www.tally.xyz/gov/hop"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hoverjawn"
+                >
+                  Delegate HOP
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </Fade>
+      </div>
+      {/* </Fade> */}
     </div>
   );
 }

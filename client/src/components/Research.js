@@ -34,7 +34,7 @@ function Research() {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3001 },
-      items: 3,
+      items: 5,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1331 },
@@ -87,180 +87,180 @@ function Research() {
         </div>
       </div>
       {/* </Slide> */}
-      <Fade in={true} timeout={4000} style={{ transitionDelay: "100ms" }}>
-        <div className="values55">
-          {alignment === "research" ? (
-            <>
-              <div className="research-cards">
-                <div
-                  style={{
-                    position: "relative",
-                  }}
-                >
-                  <Carousel
-                    responsive={responsive}
-                    focusOnSelect={true}
-                    infinite={true}
-                    autoPlay={true}
-                    renderButtonGroupOutside={true}
-                    partialVisbile={false}
-                    centerMode={true}
-                    // arrows={false}
-                    className="carooo"
-                  >
-                    {blogData.map((post, index) => (
-                      <Card
-                        sx={{
-                          width: 350,
-                          height: 300,
-                          borderRadius: 3,
-                          backgroundColor: "#171b20",
-                        }}
-                        className="dbcard"
-                      >
-                        <CardActionArea
-                          href={post.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <CardMedia
-                            component="img"
-                            height="150"
-                            image={post.thumbnail}
-                            alt="thumbnail"
-                          />
-                          <CardContent
-                            sx={{
-                              backgroundColor: "#171b20",
-                              color: "#fff",
-                              //   minHeight: 100,
-                            }}
-                          >
-                            <Typography
-                              gutterBottom
-                              variant="h6"
-                              component="div"
-                              sx={{ fontFamily: "inherit", minHeight: 80 }}
-                            >
-                              {post.title}
-                            </Typography>
-                            <Typography
-                              variant="body2"
-                              // color="text.secondary"
-                              sx={{ fontFamily: "inherit" }}
-                            >
-                              Author: {post.author}
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                      </Card>
-                    ))}
-                  </Carousel>
-                </div>
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="research-cards">
-                <div style={{ position: "relative" }}>
-                  <Carousel
-                    responsive={responsive}
-                    focusOnSelect={true}
-                    infinite={true}
-                    autoPlay={true}
-                    renderButtonGroupOutside={true}
-                    partialVisbile={false}
-                    centerMode={true}
-                    // arrows={false}
-                    className="carooo"
-                  >
-                    {recapData.map((post, index) => (
-                      <Card
-                        sx={{
-                          width: 350,
-                          height: 300,
-                          borderRadius: 3,
-                          backgroundColor: "#171b20",
-                        }}
-                        className="dbcard"
-                      >
-                        <CardActionArea
-                          href={post.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <CardMedia
-                            component="img"
-                            height="150"
-                            image={post.thumbnail}
-                            alt="thumbnail"
-                          />
-                          <CardContent
-                            sx={{
-                              backgroundColor: "#171b20",
-                              color: "#fff",
-                              //   minHeight: 100,
-                            }}
-                          >
-                            <Typography
-                              gutterBottom
-                              variant="h6"
-                              component="div"
-                              sx={{ fontFamily: "inherit", minHeight: 80 }}
-                            >
-                              {post.title}
-                            </Typography>
-                            <Typography
-                              variant="body2"
-                              // color="text.secondary"
-                              sx={{ fontFamily: "inherit" }}
-                            >
-                              Author: {post.author}
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                      </Card>
-                    ))}
-                  </Carousel>
-                </div>
-              </div>
-            </>
-          )}
-          <div className="toggler">
-            <ThemeProvider theme={theme}>
-              <ToggleButtonGroup
-                color="neutral"
-                value={alignment}
-                exclusive
-                onChange={handleChange}
+      {/* <Fade in={true} timeout={4000} style={{ transitionDelay: "100ms" }}> */}
+      <div className="values55">
+        {alignment === "research" ? (
+          <>
+            <div className="research-cards">
+              <div
+                style={{
+                  position: "relative",
+                }}
               >
-                <ToggleButton
-                  value="research"
-                  sx={{
-                    fontFamily: "inherit",
-                    color: "#fff",
-                    backgroundColor: "#171b20",
-                    borderRadius: "10px",
-                  }}
+                <Carousel
+                  responsive={responsive}
+                  focusOnSelect={true}
+                  infinite={true}
+                  autoPlay={true}
+                  renderButtonGroupOutside={true}
+                  partialVisbile={false}
+                  centerMode={true}
+                  // arrows={false}
+                  className="carooo"
                 >
-                  LATEST RESEARCH
-                </ToggleButton>
-                <ToggleButton
-                  value="recaps"
-                  sx={{
-                    fontFamily: "inherit",
-                    color: "#fff",
-                    backgroundColor: "#171b20",
-                    borderRadius: "10px",
-                  }}
+                  {blogData.map((post, index) => (
+                    <Card
+                      sx={{
+                        width: 350,
+                        height: 300,
+                        borderRadius: 3,
+                        backgroundColor: "#171b20",
+                      }}
+                      className="dbcard"
+                    >
+                      <CardActionArea
+                        href={post.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <CardMedia
+                          component="img"
+                          height="150"
+                          image={post.thumbnail}
+                          alt="thumbnail"
+                        />
+                        <CardContent
+                          sx={{
+                            backgroundColor: "#171b20",
+                            color: "#fff",
+                            //   minHeight: 100,
+                          }}
+                        >
+                          <Typography
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                            sx={{ fontFamily: "inherit", minHeight: 80 }}
+                          >
+                            {post.title}
+                          </Typography>
+                          <Typography
+                            variant="body2"
+                            // color="text.secondary"
+                            sx={{ fontFamily: "inherit" }}
+                          >
+                            Author: {post.author}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  ))}
+                </Carousel>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="research-cards">
+              <div style={{ position: "relative" }}>
+                <Carousel
+                  responsive={responsive}
+                  focusOnSelect={true}
+                  infinite={true}
+                  autoPlay={true}
+                  renderButtonGroupOutside={true}
+                  partialVisbile={false}
+                  centerMode={true}
+                  // arrows={false}
+                  className="carooo"
                 >
-                  WEEKLY ACTIVITY
-                </ToggleButton>
-              </ToggleButtonGroup>
-            </ThemeProvider>
-          </div>
+                  {recapData.map((post, index) => (
+                    <Card
+                      sx={{
+                        width: 350,
+                        height: 300,
+                        borderRadius: 3,
+                        backgroundColor: "#171b20",
+                      }}
+                      className="dbcard"
+                    >
+                      <CardActionArea
+                        href={post.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <CardMedia
+                          component="img"
+                          height="150"
+                          image={post.thumbnail}
+                          alt="thumbnail"
+                        />
+                        <CardContent
+                          sx={{
+                            backgroundColor: "#171b20",
+                            color: "#fff",
+                            //   minHeight: 100,
+                          }}
+                        >
+                          <Typography
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                            sx={{ fontFamily: "inherit", minHeight: 80 }}
+                          >
+                            {post.title}
+                          </Typography>
+                          <Typography
+                            variant="body2"
+                            // color="text.secondary"
+                            sx={{ fontFamily: "inherit" }}
+                          >
+                            Author: {post.author}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  ))}
+                </Carousel>
+              </div>
+            </div>
+          </>
+        )}
+        <div className="toggler">
+          <ThemeProvider theme={theme}>
+            <ToggleButtonGroup
+              color="neutral"
+              value={alignment}
+              exclusive
+              onChange={handleChange}
+            >
+              <ToggleButton
+                value="research"
+                sx={{
+                  fontFamily: "inherit",
+                  color: "#fff",
+                  backgroundColor: "#171b20",
+                  borderRadius: "10px",
+                }}
+              >
+                LATEST RESEARCH
+              </ToggleButton>
+              <ToggleButton
+                value="recaps"
+                sx={{
+                  fontFamily: "inherit",
+                  color: "#fff",
+                  backgroundColor: "#171b20",
+                  borderRadius: "10px",
+                }}
+              >
+                WEEKLY ACTIVITY
+              </ToggleButton>
+            </ToggleButtonGroup>
+          </ThemeProvider>
         </div>
-      </Fade>
+      </div>
+      {/* </Fade> */}
     </div>
   );
 }

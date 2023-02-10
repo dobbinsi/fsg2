@@ -1,28 +1,16 @@
-import React, { useRef } from "react";
+import React from "react";
 
-import { Fade, Slide } from "@mui/material";
+// import { Fade, Slide } from "@mui/material";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBookOpenReader,
-  faChartSimple,
-  faHandshakeSimple,
   faScroll,
-  faGear,
   faCheckToSlot,
-  faLandmark,
-  faCode,
-  faLaptopCode,
   faCoins,
-  faDatabase,
-  faLayerGroup,
-  faMicrochip,
-  faAtom,
-  faChessRook,
-  faBarsProgress,
+  // faMicrochip,
+  // faChessRook,
   faDiceD20,
-  faDiceD6,
-  faDice,
+  // faDiceD6,
 } from "@fortawesome/free-solid-svg-icons";
 
 function About() {
@@ -38,61 +26,61 @@ function About() {
           </p>
         </div>
       </div>
-      <Fade in={true} timeout={4000} style={{ transitionDelay: "100ms" }}>
-        <div className="values3">
-          <div className="title-box">Our Activity</div>
-          <div className="triple">
-            <div className="big-numbers">
-              <div className="inumbers">
-                <FontAwesomeIcon
-                  icon={faDiceD20}
-                  color="#f0ffff"
-                  size="3x"
-                  className="iconos4"
-                />
-                <h1>10</h1>
-              </div>
-              <h2>Protocol Partners</h2>
+      {/* <Fade in={true} timeout={4000} style={{ transitionDelay: "100ms" }}> */}
+      <div className="values3">
+        <div className="title-box">Our Activity</div>
+        <div className="triple">
+          <div className="big-numbers">
+            <div className="inumbers">
+              <FontAwesomeIcon
+                icon={faDiceD20}
+                color="#f0ffff"
+                size="3x"
+                className="iconos4"
+              />
+              <h1>10</h1>
             </div>
-            <div className="big-numbers">
-              <div className="inumbers">
-                <FontAwesomeIcon
-                  icon={faCheckToSlot}
-                  color="#f0ffff"
-                  size="3x"
-                  className="iconos4"
-                />
-                <h1>300</h1>
-              </div>
-              <h2>Votes Submitted</h2>
+            <h2>Protocol Partners</h2>
+          </div>
+          <div className="big-numbers">
+            <div className="inumbers">
+              <FontAwesomeIcon
+                icon={faCheckToSlot}
+                color="#f0ffff"
+                size="3x"
+                className="iconos4"
+              />
+              <h1>300</h1>
             </div>
-            <div className="big-numbers">
-              <div className="inumbers">
-                <FontAwesomeIcon
-                  icon={faScroll}
-                  color="#f0ffff"
-                  size="3x"
-                  className="iconos4"
-                />
-                <h1>12</h1>
-              </div>
-              <h2>Proposals Drafted</h2>
+            <h2>Votes Submitted</h2>
+          </div>
+          <div className="big-numbers">
+            <div className="inumbers">
+              <FontAwesomeIcon
+                icon={faScroll}
+                color="#f0ffff"
+                size="3x"
+                className="iconos4"
+              />
+              <h1>12</h1>
             </div>
-            <div className="big-numbers">
-              <div className="inumbers">
-                <FontAwesomeIcon
-                  icon={faCoins}
-                  color="#f0ffff"
-                  size="3x"
-                  className="iconos4"
-                />
-                <h1>$10m</h1>
-              </div>
-              <h2>Tokens Delegated</h2>
+            <h2>Proposals Drafted</h2>
+          </div>
+          <div className="big-numbers">
+            <div className="inumbers">
+              <FontAwesomeIcon
+                icon={faCoins}
+                color="#f0ffff"
+                size="3x"
+                className="iconos4"
+              />
+              <h1>$10m</h1>
             </div>
+            <h2>Tokens Delegated</h2>
           </div>
         </div>
-      </Fade>
+      </div>
+      {/* </Fade> */}
     </div>
   );
 }

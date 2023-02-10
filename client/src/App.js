@@ -1,5 +1,4 @@
 import "./App.css";
-import ScrollButton from "./components/ScrollButton";
 
 import { Link } from "react-scroll";
 
@@ -13,17 +12,12 @@ import React, {
   Suspense,
   useRef,
 } from "react";
-// import fscube from "./logos/fscubewhite.png";
-// import Typewriter from "typewriter-effect";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
-import { DarkModeSwitch } from "react-toggle-dark-mode";
-import useLocalStorage from "use-local-storage";
-
 import { Tooltip, Zoom } from "@mui/material";
 
-// import useScrollSnap from "react-use-scroll-snap";
 import Landing from "./components/Landing";
 import ScrollButton2 from "./components/ScrollButton2";
 import ScrollButton5 from "./components/ScrollButton5";
@@ -41,8 +35,6 @@ import Delegate from "./components/Delegate";
 import Contact from "./components/Contact";
 import Numbers from "./components/Numbers";
 
-const ThemeContext = createContext(null);
-
 // const About = lazy(() => import("./components/About"));
 // const About2 = lazy(() => import("./components/About2"));
 // const Research = lazy(() => import("./components/Research"));
@@ -51,20 +43,6 @@ const ThemeContext = createContext(null);
 // const Contact = lazy(() => import("./components/Contact"));
 
 function App() {
-  const [isDarkMode, setDarkMode] = useLocalStorage("isDarkMode", true);
-  const [theme, setTheme] = useLocalStorage("theme", "dark");
-
-  // const scrollRef = useRef(null);
-  // useScrollSnap({ ref: scrollRef, duration: 100, delay: 50 });
-
-  const toggleDarkMode = (isDarkMode) => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    setDarkMode(isDarkMode);
-    localStorage.setItem("theme", newTheme);
-    localStorage.setItem("isDarkMode", isDarkMode);
-  };
-
   const [isVisible, setIsVisible] = useState(false);
   const [height, setHeight] = useState(0);
 
@@ -74,7 +52,7 @@ function App() {
   }, []);
 
   const listenToScroll = () => {
-    let heightToShowFrom = 500;
+    let heightToShowFrom = 700;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
     setHeight(winScroll);

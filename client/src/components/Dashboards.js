@@ -4,15 +4,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import {
-  Button,
-  CardActionArea,
-  CardActions,
-  Fade,
-  Slide,
-} from "@mui/material";
+import { CardActionArea, Fade, Slide } from "@mui/material";
 
-import fscube from "../logos/fscubegrey.png";
 import optoken from "../logos/optoken.png";
 import mnde from "../logos/marinade.png";
 import snap from "../logos/snapshot.svg";
@@ -50,241 +43,239 @@ function Dashboards() {
         </div>
       </div>
       {/* </Slide> */}
-      <Fade in={true} timeout={4000} style={{ transitionDelay: "100ms" }}>
-        <div className="values77">
-          <div className="dashb">
-            <div className="dbleft">
-              <Card
+      {/* <Fade in={true} timeout={4000} style={{ transitionDelay: "100ms" }}> */}
+      <div className="values77">
+        <div className="dashb">
+          <div className="dbleft">
+            <Card
+              sx={{
+                maxWidth: 600,
+                borderRadius: 3,
+                marginBottom: 6,
+                backgroundColor: "#171b20",
+              }}
+              className="dbcard"
+            >
+              <CardActionArea
+                href={"https://op-governance.vercel.app/"}
+                target="_blank"
+                rel="noopener noreferrer"
                 sx={{
-                  maxWidth: 600,
-                  borderRadius: 3,
-                  marginBottom: 6,
+                  display: "flex",
                   backgroundColor: "#171b20",
+                  padding: 1,
                 }}
-                className="dbcard"
               >
-                <CardActionArea
-                  href={"https://op-governance.vercel.app/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <CardMedia
+                  component="img"
+                  height="100"
+                  image={optoken}
+                  style={styles.media}
                   sx={{
-                    display: "flex",
                     backgroundColor: "#171b20",
-                    padding: 1,
+                  }}
+                  alt="thumbnail"
+                />
+                <CardContent
+                  sx={{
+                    backgroundColor: "#171b20",
+                    color: "#fff",
                   }}
                 >
-                  <CardMedia
-                    component="img"
-                    height="100"
-                    image={optoken}
-                    style={styles.media}
-                    sx={{
-                      backgroundColor: "#171b20",
-                    }}
-                    alt="thumbnail"
-                  />
-                  <CardContent
-                    sx={{
-                      backgroundColor: "#171b20",
-                      color: "#fff",
-                    }}
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    sx={{ fontFamily: "inherit" }}
                   >
-                    <Typography
-                      gutterBottom
-                      variant="h6"
-                      component="div"
-                      sx={{ fontFamily: "inherit" }}
-                    >
-                      Optimism Governance Dashboard
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      // color="text.secondary"
-                      sx={{ fontFamily: "inherit" }}
-                    >
-                      Built with Flipside Crypto's ShroomDK. This dashboard was
-                      designed to track governance activity and OP tokens
-                      delegated on the Optimism network (Ethereum L2).
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-              <Card
+                    Optimism Governance Dashboard
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    // color="text.secondary"
+                    sx={{ fontFamily: "inherit" }}
+                  >
+                    Built with Flipside Crypto's ShroomDK. This dashboard was
+                    designed to track governance activity and OP tokens
+                    delegated on the Optimism network (Ethereum L2).
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+            <Card
+              sx={{
+                maxWidth: 600,
+                borderRadius: 3,
+                marginBottom: 6,
+                backgroundColor: "#171b20",
+              }}
+              className="dbcard"
+            >
+              <CardActionArea
+                href={"https://flipsidegov-snapshot.vercel.app/"}
+                target="_blank"
+                rel="noopener noreferrer"
                 sx={{
-                  maxWidth: 600,
-                  borderRadius: 3,
-                  marginBottom: 6,
+                  display: "flex",
                   backgroundColor: "#171b20",
+                  padding: 1,
                 }}
-                className="dbcard"
               >
-                <CardActionArea
-                  href={"https://flipsidegov-snapshot.vercel.app/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <CardMedia
+                  component="img"
+                  height="100"
+                  image={snap}
+                  style={styles.media}
                   sx={{
-                    display: "flex",
                     backgroundColor: "#171b20",
-                    padding: 1,
+                  }}
+                  alt="thumbnail"
+                />
+                <CardContent
+                  sx={{
+                    backgroundColor: "#171b20",
+                    color: "#fff",
                   }}
                 >
-                  <CardMedia
-                    component="img"
-                    height="100"
-                    image={snap}
-                    style={styles.media}
-                    sx={{
-                      backgroundColor: "#171b20",
-                    }}
-                    alt="thumbnail"
-                  />
-                  <CardContent
-                    sx={{
-                      backgroundColor: "#171b20",
-                      color: "#fff",
-                    }}
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    sx={{ fontFamily: "inherit" }}
                   >
-                    <Typography
-                      gutterBottom
-                      variant="h6"
-                      component="div"
-                      sx={{ fontFamily: "inherit" }}
-                    >
-                      Snapshot Analytics
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      // color="text.secondary"
-                      sx={{ fontFamily: "inherit" }}
-                    >
-                      Built with Flipside Crypto's ShroomDK. This dashboard was
-                      designed to track governance activity across Snapshot
-                      spaces with charts to monitor trends in usage and
-                      leaderboards to identify the most active communities &
-                      contributors.
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </div>
-            <div className="dbright">
-              <Card
+                    Snapshot Analytics
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    // color="text.secondary"
+                    sx={{ fontFamily: "inherit" }}
+                  >
+                    Built with Flipside Crypto's ShroomDK. This dashboard was
+                    designed to track governance activity across Snapshot spaces
+                    with charts to monitor trends in usage and leaderboards to
+                    identify the most active communities & contributors.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </div>
+          <div className="dbright">
+            <Card
+              sx={{
+                maxWidth: 600,
+                borderRadius: 3,
+                marginBottom: 6,
+                backgroundColor: "#171b20",
+              }}
+              className="dbcard"
+            >
+              <CardActionArea
+                href={"https://flipsidegov-mnde.vercel.app/"}
+                target="_blank"
+                rel="noopener noreferrer"
                 sx={{
-                  maxWidth: 600,
-                  borderRadius: 3,
-                  marginBottom: 6,
+                  display: "flex",
                   backgroundColor: "#171b20",
+                  padding: 1,
                 }}
-                className="dbcard"
               >
-                <CardActionArea
-                  href={"https://flipsidegov-mnde.vercel.app/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <CardMedia
+                  component="img"
+                  height="800"
+                  image={mnde}
+                  style={styles.media1}
                   sx={{
-                    display: "flex",
                     backgroundColor: "#171b20",
-                    padding: 1,
+                  }}
+                  alt="thumbnail"
+                />
+                <CardContent
+                  sx={{
+                    backgroundColor: "#171b20",
+                    color: "#fff",
                   }}
                 >
-                  <CardMedia
-                    component="img"
-                    height="800"
-                    image={mnde}
-                    style={styles.media1}
-                    sx={{
-                      backgroundColor: "#171b20",
-                    }}
-                    alt="thumbnail"
-                  />
-                  <CardContent
-                    sx={{
-                      backgroundColor: "#171b20",
-                      color: "#fff",
-                    }}
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    sx={{ fontFamily: "inherit" }}
                   >
-                    <Typography
-                      gutterBottom
-                      variant="h6"
-                      component="div"
-                      sx={{ fontFamily: "inherit" }}
-                    >
-                      Marinade Governance Dashboard
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      // color="text.secondary"
-                      sx={{ fontFamily: "inherit" }}
-                    >
-                      This dashboard was built to help the Marinade community
-                      gain a better understanding of protocol governance and the
-                      MNDE token. We also monitor which validators receive the
-                      most community support.
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-              <Card
+                    Marinade Governance Dashboard
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    // color="text.secondary"
+                    sx={{ fontFamily: "inherit" }}
+                  >
+                    This dashboard was built to help the Marinade community gain
+                    a better understanding of protocol governance and the MNDE
+                    token. We also monitor which validators receive the most
+                    community support.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+            <Card
+              sx={{
+                maxWidth: 600,
+                borderRadius: 3,
+                marginBottom: 6,
+                backgroundColor: "#171b20",
+              }}
+              className="dbcard"
+            >
+              <CardActionArea
+                href={"/"}
+                target="_blank"
+                rel="noopener noreferrer"
                 sx={{
-                  maxWidth: 600,
-                  borderRadius: 3,
-                  marginBottom: 6,
+                  display: "flex",
                   backgroundColor: "#171b20",
+                  padding: 1,
                 }}
-                className="dbcard"
               >
-                <CardActionArea
-                  href={"/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <CardMedia
+                  component="img"
+                  height="100"
+                  image={osmo}
+                  style={styles.media}
                   sx={{
-                    display: "flex",
                     backgroundColor: "#171b20",
-                    padding: 1,
+                  }}
+                  alt="thumbnail"
+                />
+                <CardContent
+                  sx={{
+                    backgroundColor: "#171b20",
+                    color: "#fff",
                   }}
                 >
-                  <CardMedia
-                    component="img"
-                    height="100"
-                    image={osmo}
-                    style={styles.media}
-                    sx={{
-                      backgroundColor: "#171b20",
-                    }}
-                    alt="thumbnail"
-                  />
-                  <CardContent
-                    sx={{
-                      backgroundColor: "#171b20",
-                      color: "#fff",
-                    }}
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    sx={{ fontFamily: "inherit" }}
                   >
-                    <Typography
-                      gutterBottom
-                      variant="h6"
-                      component="div"
-                      sx={{ fontFamily: "inherit" }}
-                    >
-                      New Dashboard Coming Soon(TM)
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      // color="text.secondary"
-                      sx={{ fontFamily: "inherit" }}
-                    >
-                      Built with Flipside Crypto's ShroomDK. This dashboard was
-                      designed to track governance activity across Snapshot
-                      spaces with charts to monitor trends in usage and
-                      leaderboards to identify the most active communities &
-                      contributors.
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </div>
+                    New Dashboard Coming Soon(TM)
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    // color="text.secondary"
+                    sx={{ fontFamily: "inherit" }}
+                  >
+                    Built with Flipside Crypto's ShroomDK. This dashboard was
+                    designed to track governance activity across Snapshot spaces
+                    with charts to monitor trends in usage and leaderboards to
+                    identify the most active communities & contributors.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
           </div>
         </div>
-      </Fade>
+      </div>
+      {/* </Fade> */}
     </div>
   );
 }
