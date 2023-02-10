@@ -7,7 +7,7 @@ import { Link } from "react-scroll";
 const ScrollButton6 = () => {
   return (
     <div className="breaker">
-      <Link to="research" spy={true} smooth={true} offset={-100} duration={500}>
+      <Link to="research" spy={true} smooth={true} duration={500}>
         <FontAwesomeIcon
           icon={faAnglesDown}
           color="#f0ffff"

@@ -4,10 +4,10 @@ import { faAnglesDown } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-scroll";
 
-const ScrollButton9 = () => {
+const ScrollButton6 = () => {
   return (
     <div className="breaker">
-      <Link to="contact" spy={true} smooth={true} duration={500}>
+      <Link to="about3" spy={true} smooth={true} duration={500}>
         <FontAwesomeIcon
           icon={faAnglesDown}
           color="#f0ffff"
@@ -20,4 +20,4 @@ const ScrollButton9 = () => {
   );
 };
 
-export default ScrollButton9;
+export default ScrollButton6;

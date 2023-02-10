@@ -5,27 +5,27 @@ import hop from "../logos/hoptoken.png";
 import op from "../logos/optoken.png";
 import aave from "../logos/aavetoken.png";
 
-import { Fade } from "@mui/material";
-import Footer from "./Footer";
+import { Fade, Slide } from "@mui/material";
 
 function Delegate() {
   return (
     <div className="intro5">
-      <h1 className="bigletters">05: DELEGATE TO FLIPSIDE</h1>
-
-      <div className="typewriter2">
-        <p className="type2">
-          Through active participation, we've developed key understandings
-          around the needs and flow of information in the governance process.
-          Our dedication to support and contribute in our partner communities
-          allows us to improve outcomes for everyone, and we'd be honored to
-          vote on your behalf.
-        </p>
+      {/* <Slide direction="up" in={true} mountOnEnter style={{ transitionDelay: "100ms" }}> */}
+      <div>
+        <h1 className="bigletters">06: DELEGATE TO FLIPSIDE</h1>
+        <div className="typewriter2">
+          <p className="type2">
+            Through active participation, we've developed key understandings
+            around the needs and flow of information in the governance process.
+            Our dedication to support and contribute in our partner communities
+            allows us to improve outcomes for everyone, and we'd be honored to
+            vote on your behalf.
+          </p>
+        </div>
       </div>
-
-      <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
+      {/* </Slide> */}
+      <Fade in={true} timeout={4000} style={{ transitionDelay: "100ms" }}>
         <div className="values">
-          {/* <h1 id="dele">DELEGATE TO FLIPSIDE</h1> */}
           <div class="container2">
             <div class="card2">
               <div class="face face1">

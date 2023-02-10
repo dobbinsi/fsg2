@@ -4,7 +4,13 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions, Fade } from "@mui/material";
+import {
+  Button,
+  CardActionArea,
+  CardActions,
+  Fade,
+  Slide,
+} from "@mui/material";
 
 import fscube from "../logos/fscubegrey.png";
 import optoken from "../logos/optoken.png";
@@ -32,17 +38,20 @@ function Dashboards() {
 
   return (
     <div className="intro">
-      <h1 className="bigletters">04: TOOLS & DASHBOARDS</h1>
-      <div className="typewriter2">
-        <p className="type2">
-          We build tools and dashboards to help users gain a better
-          understanding of protocol governance and monitor trends in voting
-          activity.
-        </p>
+      {/* <Slide direction="up" in={true} mountOnEnter style={{ transitionDelay: "100ms" }}> */}
+      <div>
+        <h1 className="bigletters">05: TOOLS & DASHBOARDS</h1>
+        <div className="typewriter2" id="tooly">
+          <p className="type2">
+            We build tools and dashboards to help users gain a better
+            understanding of protocol governance and monitor trends in voting
+            activity.
+          </p>
+        </div>
       </div>
-      <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
-        <div className="values">
-          {/* <h1 className="valuesh1">TOOLS & DASHBOARDS</h1> */}
+      {/* </Slide> */}
+      <Fade in={true} timeout={4000} style={{ transitionDelay: "100ms" }}>
+        <div className="values77">
           <div className="dashb">
             <div className="dbleft">
               <Card
@@ -50,6 +59,7 @@ function Dashboards() {
                   maxWidth: 600,
                   borderRadius: 3,
                   marginBottom: 6,
+                  backgroundColor: "#171b20",
                 }}
                 className="dbcard"
               >
@@ -100,7 +110,12 @@ function Dashboards() {
                 </CardActionArea>
               </Card>
               <Card
-                sx={{ maxWidth: 600, borderRadius: 3, marginBottom: 6 }}
+                sx={{
+                  maxWidth: 600,
+                  borderRadius: 3,
+                  marginBottom: 6,
+                  backgroundColor: "#171b20",
+                }}
                 className="dbcard"
               >
                 <CardActionArea
@@ -154,7 +169,12 @@ function Dashboards() {
             </div>
             <div className="dbright">
               <Card
-                sx={{ maxWidth: 600, borderRadius: 3, marginBottom: 6 }}
+                sx={{
+                  maxWidth: 600,
+                  borderRadius: 3,
+                  marginBottom: 6,
+                  backgroundColor: "#171b20",
+                }}
                 className="dbcard"
               >
                 <CardActionArea
@@ -205,7 +225,12 @@ function Dashboards() {
                 </CardActionArea>
               </Card>
               <Card
-                sx={{ maxWidth: 600, borderRadius: 3, marginBottom: 6 }}
+                sx={{
+                  maxWidth: 600,
+                  borderRadius: 3,
+                  marginBottom: 6,
+                  backgroundColor: "#171b20",
+                }}
                 className="dbcard"
               >
                 <CardActionArea

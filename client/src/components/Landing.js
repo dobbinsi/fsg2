@@ -24,7 +24,7 @@ function Landing() {
             to="about"
             spy={true}
             smooth={true}
-            offset={-100}
+            // offset={-100}
             duration={500}
           >
             WHO WE ARE
@@ -35,7 +35,7 @@ function Landing() {
             to="about2"
             spy={true}
             smooth={true}
-            offset={-100}
+            // offset={-100}
             duration={500}
           >
             WHAT WE DO
@@ -43,10 +43,21 @@ function Landing() {
           <Link
             activeClass="active"
             className="navlink"
+            to="about3"
+            spy={true}
+            smooth={true}
+            // offset={-100}
+            duration={500}
+          >
+            STATS
+          </Link>
+          <Link
+            activeClass="active"
+            className="navlink"
             to="research"
             spy={true}
             smooth={true}
-            offset={-100}
+            // offset={-100}
             duration={500}
           >
             RESEARCH
@@ -58,7 +69,7 @@ function Landing() {
             to="dashboards"
             spy={true}
             smooth={true}
-            offset={-100}
+            // offset={-100}
             duration={500}
           >
             TOOLS
@@ -69,7 +80,7 @@ function Landing() {
             to="delegate"
             spy={true}
             smooth={true}
-            offset={-100}
+            // offset={-100}
             duration={500}
           >
             DELEGATE
@@ -80,7 +91,7 @@ function Landing() {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-100}
+            // offset={-100}
             duration={500}
           >
             CONTACT US
@@ -177,7 +188,7 @@ function Landing() {
               to="about"
               spy={true}
               smooth={true}
-              offset={-100}
+              // offset={-100}
               duration={500}
             >
               <FontAwesomeIcon

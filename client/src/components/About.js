@@ -1,21 +1,25 @@
-import React from "react";
-import fsgservices from "../logos/fsgservices.png";
-import fsgservices2 from "../logos/fsg_services2.png";
+import React, { useRef } from "react";
 
-import { Fade } from "@mui/material";
+import { Fade, Slide } from "@mui/material";
 
 function About() {
+  // const containerRef = useRef(null);
+
   return (
     <div className="intro">
-      <h1 className="bigletters">01: WHO WE ARE</h1>
-      <div className="typewriter2">
-        <p className="type2">
-          Flipside is an ecosystem growth partner. Our governance team serves as
-          a Professional Delegate, supporting the proliferation and function of
-          decentralized organizations.
-        </p>
+      {/* <Slide direction="up" in={true} mountOnEnter style={{ transitionDelay: "100ms" }}> */}
+      <div>
+        <h1 className="bigletters">01: WHO WE ARE</h1>
+        <div className="typewriter2">
+          <p className="type2">
+            Flipside is an ecosystem growth partner. Our governance team serves
+            as a Professional Delegate, supporting the proliferation and
+            function of decentralized organizations.
+          </p>
+        </div>
       </div>
-      <Fade in={true} timeout={4000} style={{ transitionDelay: "300ms" }}>
+      {/* </Slide> */}
+      <Fade in={true} timeout={4000} style={{ transitionDelay: "100ms" }}>
         <div className="values">
           <div class="container1">
             <div class="card">

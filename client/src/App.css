@@ -13,7 +13,7 @@
 }
 
 body {
-  background: #000;
+  background: #131313;
   color: #fff;
   min-height: 100vh;
   min-width: 100%;
@@ -32,10 +32,14 @@ body {
 }
 
 .wrapper {
-  /* width: 85%; */
   margin: auto;
-  /* padding: 30px; */
   background-color: transparent;
+  /* height: 100%;
+  position: relative;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory; */
+  scroll-behavior: smooth;
 }
 
 /* .lander {
@@ -52,7 +56,7 @@ body {
   margin: auto;
   padding: 30px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .nav-main {
@@ -123,9 +127,14 @@ body {
   cursor: pointer;
 }
 
+.iconos {
+  --fa-animation-duration: 2s;
+}
+
 .iconos:hover {
   color: #5cede5;
   cursor: pointer;
+  --fa-animation-duration: 2s;
 }
 
 .scroller {
@@ -320,8 +329,46 @@ body {
   margin-bottom: 100px;
 }
 
+#tivy {
+  margin-bottom: 100px;
+}
+
+#searchy {
+  margin-bottom: 100px;
+}
+
+#tooly {
+  margin-bottom: 100px;
+}
+
 .values {
   margin-top: 100px;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.values88 {
+  margin-top: 100px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.values55 {
+  margin-top: 100px;
+  width: 90%;
+  margin: auto;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.values77 {
+  margin-top: 100px;
+  height: 400px;
+  width: 90%;
+  margin: auto;
+  padding: 50px;
+  background-color: #000;
+  border-radius: 10px;
 }
 
 .values3 {
@@ -330,6 +377,7 @@ body {
   width: 85%;
   min-height: 335px;
   margin: auto;
+  background-color: #000;
 }
 
 .title-box {
@@ -339,6 +387,7 @@ body {
   display: inline;
   background-color: #000;
   font-size: larger;
+  border-radius: 10px;
 }
 
 .valuesh1 {
@@ -381,10 +430,11 @@ body {
 }
 
 .container1 {
-  height: 300px;
+  height: 420px;
   width: 85%;
-  display: flex;
   margin: auto;
+  display: flex;
+  align-items: center;
 }
 
 .card {
@@ -454,8 +504,8 @@ body {
   z-index: 3;
   width: 0px;
   height: 100%;
-  background-color: #08aeea;
-  background-image: linear-gradient(90deg, #08aeea 0%, #2af598 100%);
+  background-color: #5cede5;
+  /* background-image: linear-gradient(90deg, #08aeea 0%, #2af598 100%); */
 
   transition: 0.6s ease-out;
 }
@@ -620,7 +670,8 @@ body {
   justify-content: center;
   height: 50px;
   margin-top: 5%;
-  margin-bottom: 50%;
+  /* margin-bottom: 10%; */
+  /* background-color: green; */
   /* opacity: 0.4; */
 }
 
@@ -628,50 +679,88 @@ body {
   display: flex;
   justify-content: center;
   height: 50px;
-  opacity: 0.4;
+  /* opacity: 0.4; */
   margin-top: 100px;
 }
 
 #home {
   height: fit-content;
-  margin-bottom: 50%;
+  margin-bottom: 5%;
+  padding-bottom: 100px;
   background-image: url("./logos/fsbw33.png");
   background-position: initial;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+  scroll-snap-align: start;
 }
 
 #about {
   height: fit-content;
   width: 85%;
   margin: auto;
+  scroll-snap-align: start;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  /* margin-bottom: 5%; */
+}
+
+#about3 {
+  height: fit-content;
+  width: 100%;
+  margin: auto;
+  scroll-snap-align: start;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  /* margin-bottom: 5%; */
+}
+
+#about2 {
+  height: fit-content;
+  width: 100%;
+  margin: auto;
+  scroll-snap-align: start;
+  background-color: #000;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 #research {
   height: fit-content;
-  width: 85%;
+  width: 100%;
   margin: auto;
+  scroll-snap-align: start;
+  background-color: #000;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 #dashboards {
   height: fit-content;
   width: 85%;
   margin: auto;
+  scroll-snap-align: start;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 #delegate {
   height: fit-content;
-  width: 85%;
+  width: 100%;
   margin: auto;
   margin-bottom: 5%;
+  scroll-snap-align: start;
+  background-color: #000;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 #contact {
   height: fit-content;
   width: 85%;
   margin: auto;
+  scroll-snap-align: start;
 }
 
 #ct {
@@ -689,7 +778,7 @@ body {
   margin: auto;
   display: flex;
   justify-content: center;
-  background-color: #171b20;
+  background-color: #000;
   border-radius: 10px;
   box-shadow: 0px 0px 12px 2px #fff;
 }
@@ -790,13 +879,13 @@ textarea {
 .top-service {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .top-service2 {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .bot-service {
@@ -868,7 +957,8 @@ textarea {
   margin-bottom: 90px;
   display: flex;
   justify-content: center;
-  filter: drop-shadow(5px 5px 150px #fff) drop-shadow(-10px -10px 50px #fff);
+  filter: drop-shadow(5px 5px 155px #fff) drop-shadow(-10px -10px 50px #fff);
+  opacity: 0.8;
 }
 
 .triangle-wrapper {
@@ -904,4 +994,40 @@ textarea {
   transition: 0.3s ease-in-out;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.triple {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+
+.big-numbers {
+  width: 250px;
+  max-width: 250px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.big-numbers h1 {
+  color: #5cede5;
+  font-size: 80px;
+  margin-left: 20px;
+}
+
+.big-numbers h2 {
+  margin-top: 10px;
+}
+
+.inumbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconos4 {
+  margin-top: 10px;
 }
