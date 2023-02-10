@@ -1,20 +1,24 @@
-@font-face {
+/* @font-face {
   font-family: "ibm_3270_narrowmedium";
   src: url("./assets/fonts/3270_narrow_500-webfont.woff2") format("woff2"),
     url("./assets/fonts/3270_narrow_500-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-}
+} */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "ibm_3270_narrowmedium", Courier, monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 body {
   background: #131313;
-  color: #fff;
+  color: #f5f5f5;
   min-height: 100vh;
   min-width: 100%;
 }
@@ -27,7 +31,7 @@ body {
 #light .test {
   min-height: 100vh;
   min-width: 100%;
-  background-color: #fff;
+  background-color: #f5f5f5;
   color: #000;
 }
 
@@ -54,14 +58,14 @@ body {
   backdrop-filter: saturate(180%) blur(8px);
   border-radius: 10px;
   transition: 0.3s ease;
-  box-shadow: 0px 0px 12px 2px #fff;
+  box-shadow: 0px 0px 12px 2px #f5f5f5;
 }
 
 .navlink {
   margin-left: 70px;
   font-size: large;
   text-decoration: none;
-  color: #fff;
+  color: #f5f5f5;
 }
 
 .navlink8 {
@@ -69,20 +73,20 @@ body {
   margin-right: 70px;
   font-size: large;
   text-decoration: none;
-  color: #fff;
+  color: #f5f5f5;
 }
 
 .navlink2 {
   font-size: large;
   text-decoration: none;
-  color: #fff;
+  color: #f5f5f5;
 }
 
 .navlink:visited {
   margin-left: 70px;
   font-size: large;
   text-decoration: none;
-  color: #fff;
+  color: #f5f5f5;
 }
 
 .navlink:hover {
@@ -94,7 +98,7 @@ body {
   margin-left: 70px;
   font-size: large;
   text-decoration: none;
-  color: #fff;
+  color: #f5f5f5;
 }
 
 .navlink2:hover {
@@ -105,7 +109,7 @@ body {
   margin-left: 70px;
   font-size: large;
   text-decoration: none;
-  color: #fff;
+  color: #f5f5f5;
 }
 
 .navlink8:hover {
@@ -170,7 +174,7 @@ body {
   border-radius: 10px;
   transform: translateY(-5px);
   transition: 0.4s ease-out;
-  box-shadow: 0px 0px 8px 2px #fff;
+  box-shadow: 0px 0px 8px 2px #f5f5f5;
 }
 
 .fslogo {
@@ -232,7 +236,7 @@ body {
   backdrop-filter: saturate(180%) blur(8px);
   border-radius: 10px;
   transition: 0.3s ease;
-  box-shadow: 0px 0px 12px 2px #fff;
+  box-shadow: 0px 0px 12px 2px #f5f5f5;
 }
 
 .socials-ct {
@@ -254,7 +258,7 @@ body {
   background: rgba(45, 45, 45, 0.226);
   backdrop-filter: saturate(180%) blur(8px);
   transition: 0.3s ease;
-  box-shadow: 0px 0px 12px 2px #fff;
+  box-shadow: 0px 0px 12px 2px #f5f5f5;
 }
 
 .text-vert {
@@ -372,23 +376,23 @@ body {
 }
 
 .dbcard {
-  box-shadow: 0px 0px 8px 0px #fff;
+  box-shadow: 0px 0px 8px 0px #f5f5f5;
   transition: 0.4s ease-out;
 }
 
 .dbcard:hover {
   transform: translateY(-5px);
   transition: 0.4s ease-out;
-  box-shadow: 0px 0px 20px 2px #fff;
+  box-shadow: 0px 0px 20px 2px #f5f5f5;
 }
 
 .hoverjawn {
-  box-shadow: 0px 0px 8px 0px #fff;
+  box-shadow: 0px 0px 8px 0px #f5f5f5;
 }
 
 .hoverjawn:hover {
   transition: 0.3s ease;
-  box-shadow: 0px 0px 12px 2px #fff;
+  box-shadow: 0px 0px 12px 2px #f5f5f5;
 }
 
 .container1 {
@@ -428,7 +432,7 @@ body {
 }
 
 .card:hover p {
-  color: #fff;
+  color: #f5f5f5;
 }
 
 .card:hover ~ .card {
@@ -438,7 +442,7 @@ body {
 }
 
 .title {
-  color: #fff;
+  color: #f5f5f5;
   font-weight: 300;
   font-size: x-large;
   position: absolute;
@@ -533,7 +537,7 @@ body {
 .container2 .card2 .face.face1 .content h3 {
   margin: 10px 0 0;
   padding: 0;
-  color: #fff;
+  color: #f5f5f5;
   text-align: center;
   font-size: 1.5em;
   font-weight: normal;
@@ -577,14 +581,14 @@ body {
   text-decoration: none;
   font-weight: 700;
   padding: 5px;
-  color: #fff;
+  color: #f5f5f5;
   background: #000;
   border: 2px solid #000;
 }
 
 .container2 .card2 .face.face2 .content2 a:hover {
   background: #000;
-  color: #fff;
+  color: #f5f5f5;
 }
 
 .TimelineIndicator_container {
@@ -733,7 +737,7 @@ body {
   justify-content: center;
   background-color: #000;
   border-radius: 10px;
-  box-shadow: 0px 0px 12px 2px #fff;
+  box-shadow: 0px 0px 12px 2px #f5f5f5;
 }
 
 .contact-logo {
@@ -751,7 +755,7 @@ form {
 }
 
 .feedback-input {
-  color: #fff;
+  color: #f5f5f5;
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
@@ -827,7 +831,7 @@ textarea {
   transition: 0.3s;
   transform: translateY(-5px);
   transition: 0.4s ease-out;
-  box-shadow: 0px 0px 8px 2px #fff;
+  box-shadow: 0px 0px 8px 2px #f5f5f5;
   color: #5cede5;
 }
 
