@@ -79,7 +79,7 @@ function Dashboards() {
                 <CardContent
                   sx={{
                     backgroundColor: "#171b20",
-                    color: "#fff",
+                    color: "#f5f5f5",
                   }}
                 >
                   <Typography
@@ -134,7 +134,7 @@ function Dashboards() {
                 <CardContent
                   sx={{
                     backgroundColor: "#171b20",
-                    color: "#fff",
+                    color: "#f5f5f5",
                   }}
                 >
                   <Typography
@@ -192,7 +192,7 @@ function Dashboards() {
                 <CardContent
                   sx={{
                     backgroundColor: "#171b20",
-                    color: "#fff",
+                    color: "#f5f5f5",
                   }}
                 >
                   <Typography
@@ -248,7 +248,7 @@ function Dashboards() {
                 <CardContent
                   sx={{
                     backgroundColor: "#171b20",
-                    color: "#fff",
+                    color: "#f5f5f5",
                   }}
                 >
                   <Typography

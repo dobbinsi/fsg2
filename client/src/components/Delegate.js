@@ -17,8 +17,7 @@ function Delegate() {
           <p className="type2">
             Through active participation, we've developed key understandings
             around the needs and flow of information in the governance process.
-            Our dedication to support and contribute in our partner communities
-            allows us to improve outcomes for everyone, and we'd be honored to
+            Our dedication to support and contribute allows us to improve outcomes for everyone, and we'd be honored to
             vote on your behalf.
           </p>
         </div>

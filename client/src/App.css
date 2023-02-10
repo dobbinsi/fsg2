@@ -63,7 +63,7 @@ body {
 
 .navlink {
   margin-left: 70px;
-  font-size: large;
+  /* font-size: large; */
   text-decoration: none;
   color: #f5f5f5;
 }
@@ -71,20 +71,20 @@ body {
 .navlink8 {
   margin-left: 70px;
   margin-right: 70px;
-  font-size: large;
+  /* font-size: large; */
   text-decoration: none;
   color: #f5f5f5;
 }
 
 .navlink2 {
-  font-size: large;
+  /* font-size: large; */
   text-decoration: none;
   color: #f5f5f5;
 }
 
 .navlink:visited {
   margin-left: 70px;
-  font-size: large;
+  /* font-size: large; */
   text-decoration: none;
   color: #f5f5f5;
 }
@@ -96,7 +96,7 @@ body {
 
 .navlink2:visited {
   margin-left: 70px;
-  font-size: large;
+  /* font-size: large; */
   text-decoration: none;
   color: #f5f5f5;
 }
@@ -107,7 +107,7 @@ body {
 }
 .navlink8:visited {
   margin-left: 70px;
-  font-size: large;
+  /* font-size: large; */
   text-decoration: none;
   color: #f5f5f5;
 }
@@ -351,7 +351,7 @@ body {
   margin-left: 1em;
   display: inline;
   background-color: #000;
-  font-size: larger;
+  /* font-size: larger; */
   border-radius: 10px;
 }
 
@@ -444,7 +444,7 @@ body {
 .title {
   color: #f5f5f5;
   font-weight: 300;
-  font-size: x-large;
+  /* font-size: x-large; */
   position: absolute;
   left: 20px;
   top: 40px;
@@ -870,6 +870,7 @@ textarea {
   text-align: center;
   display: flex;
   align-items: center;
+  font-size: small;
 }
 
 @-webkit-keyframes pulsate-fwd {

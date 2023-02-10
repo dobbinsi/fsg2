@@ -132,13 +132,13 @@ function Research() {
                         <CardContent
                           sx={{
                             backgroundColor: "#171b20",
-                            color: "#fff",
+                            color: "#f5f5f5",
                             //   minHeight: 100,
                           }}
                         >
                           <Typography
                             gutterBottom
-                            variant="h6"
+                            variant="body1"
                             component="div"
                             sx={{ fontFamily: "inherit", minHeight: 80 }}
                           >
@@ -198,7 +198,7 @@ function Research() {
                         <CardContent
                           sx={{
                             backgroundColor: "#171b20",
-                            color: "#fff",
+                            color: "#f5f5f5",
                             //   minHeight: 100,
                           }}
                         >
@@ -238,7 +238,7 @@ function Research() {
                 value="research"
                 sx={{
                   fontFamily: "inherit",
-                  color: "#fff",
+                  color: "#f5f5f5",
                   backgroundColor: "#171b20",
                   borderRadius: "10px",
                 }}
@@ -249,7 +249,7 @@ function Research() {
                 value="recaps"
                 sx={{
                   fontFamily: "inherit",
-                  color: "#fff",
+                  color: "#f5f5f5",
                   backgroundColor: "#171b20",
                   borderRadius: "10px",
                 }}

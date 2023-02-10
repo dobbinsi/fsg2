@@ -28,7 +28,7 @@ function About() {
       </div>
       {/* <Fade in={true} timeout={4000} style={{ transitionDelay: "100ms" }}> */}
       <div className="values3">
-        <div className="title-box">Our Activity</div>
+        <div className="title-box">OUR ACTIVITY</div>
         <div className="triple">
           <div className="big-numbers">
             <div className="inumbers">
