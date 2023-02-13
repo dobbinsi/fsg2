@@ -204,7 +204,7 @@ function Research() {
                         >
                           <Typography
                             gutterBottom
-                            variant="h6"
+                            variant="body1"
                             component="div"
                             sx={{ fontFamily: "inherit", minHeight: 80 }}
                           >

@@ -8,7 +8,9 @@
 
 /* @import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap"); */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
 
 * {
   margin: 0;
